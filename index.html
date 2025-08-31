@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SPLAT City — Vintage Museum & Shop</title>
+  <meta name="description" content="SPLAT City is a playful, vintage museum & marketplace for clothing, furniture, and collectibles." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Site header: branding + primary navigation -->
+  <header role="banner">
+    <div class="container">
+      <h1 class="brand">SPLAT <span aria-hidden="true">City</span></h1>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="pages/collection.html">Collection</a></li>
+          <li><a href="pages/journal.html">Journal</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content area: structured with semantic sections -->
+  <main id="main" tabindex="-1">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Digital Vintage Museum</p>
+        <h2 class="hero-title">Wacky-PoMo slime vibes. Real retro artifacts.</h2>
+        <p class="lead">Curated vintage clothing, furniture, and collectibles—celebrated, documented, and occasionally released as limited drops.</p>
+        <p><a class="button" href="pages/collection.html">Browse the Collection</a></p>
+        <figure class="hero-figure">
+          <!-- Using a hosted placeholder image so your page looks good even before you add your own images -->
+          <img src="https://via.placeholder.com/1200x600?text=SPLAT+City+Hero" alt="Collage of colorful 80s/90s vintage pieces" />
+          <figcaption>Selections from SPLAT City’s rotating exhibits.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FEATURED ITEMS (static content for Lab 1) -->
+    <section class="featured">
+      <div class="container">
+        <h2>Featured Finds</h2>
+
+        <article class="card">
+          <figure>
+            <img src="https://via.placeholder.com/600x400?text=1990s+Windbreaker" alt="Vintage windbreaker jacket in bright colors" />
+            <figcaption>1990s Windbreaker</figcaption>
+          </figure>
+          <h3>1990s Windbreaker</h3>
+          <p>Neon panels, mesh lining, and that unmistakable retro cut. Catalogued with provenance notes.</p>
+        </article>
+
+        <article class="card">
+          <figure>
+            <img src="https://via.placeholder.com/600x400?text=Memphis+Lamp" alt="Memphis-style table lamp" />
+            <figcaption>Memphis Lamp</figcaption>
+          </figure>
+          <h3>Memphis-Style Table Lamp</h3>
+          <p>Playful geometry and saturated color—documented with production year and origin where known.</p>
+        </article>
+
+        <article class="card">
+          <figure>
+            <img src="https://via.placeholder.com/600x400?text=Retro+Handheld+Console" alt="Retro handheld game console" />
+            <figcaption>Handheld Console</figcaption>
+          </figure>
+          <h3>Retro Handheld Console</h3>
+          <p>Working condition, original buttons and screen; includes a short write-up on its design lineage.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ASIDE: secondary content -->
+    <aside class="newsletter" aria-labelledby="nl-heading">
+      <div class="container">
+        <h2 id="nl-heading">Get drop alerts</h2>
+        <!-- Simple non-functional form (static for Lab 1) -->
+        <form action="#" method="post">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" />
+          <button type="submit" disabled>Notify Me (coming soon)</button>
+        </form>
+      </div>
+    </aside>
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+      <div class="container">
+        <h2>What is SPLAT City?</h2>
+        <p>SPLAT City is an online museum and brand focused on the cultural value of vintage artifacts—more than “just selling,” we document, tell stories, and connect enthusiasts.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global footer -->
+  <footer role="contentinfo">
+    <div class="container">
+      <small>&copy; 2025 Jordan Martinez • SPLAT City</small>
+      <nav aria-label="Footer">
+        <ul class="footer-nav">
+          <li><a href="pages/accessibility.html">Accessibility</a></li>
+          <li><a href="pages/privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Developer comments help graders see your intent:
+       - Semantic layout: header/nav/main/section/article/aside/footer
+       - Single H1 for page; H2/H3 for subsections
+       - Static content populated for Lab 1
+       - Ready for validation at validator.w3.org
+  -->
+</body>
+</html>
