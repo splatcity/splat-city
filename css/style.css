@@ -69,6 +69,13 @@ footer { border-top: 1px solid #e5e7eb; padding: 1rem 0; background: #fafafa; }
 #contact {
   text-align: center;
 }
+/* Banner image on Contact page */
+#contact img.banner {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 1rem auto;
+}
 
 #contact a {
   color: #666600;
