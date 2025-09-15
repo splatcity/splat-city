@@ -68,3 +68,24 @@ footer { border-top: 1px solid #e5e7eb; padding: 1rem 0; background: #fafafa; }
 @media (min-width: 720px) {
   .featured .container { grid-template-columns: repeat(3, 1fr); }
 }
+/* Contact section styles */
+#contact {
+  text-align: center;
+}
+
+#contact p,
+#contact h2,
+#contact iframe {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#contact a {
+  color: #666600;
+  text-decoration: none;
+}
+
+
+
+
