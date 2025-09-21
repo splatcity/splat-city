@@ -1,0 +1,110 @@
+/*
+  Author: Your Name
+  Date: 2025-09-13
+  File Name: styles.css
+*/
+
+/* =========================
+   CSS Reset
+   (Step 6)
+   ========================= */
+body, header, nav, main, footer, img, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* (Step 7) – image rule  */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   Header (Step 8)
+   ========================= */
+header {
+  text-align: center;
+  font-size: 3em;
+  color: #373684;
+}
+header h1 { font-style: italic; }
+
+/* =========================
+   Navigation (Step 9)
+   ========================= */
+nav {
+  background-color: #373684;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  text-align: center;
+}
+nav li {
+  display: inline-block;
+  font-size: 2em;
+}
+nav li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: .5em 1em;
+  text-decoration: none;
+}
+
+/* =========================
+   Main content (Step 10)
+   ========================= */
+main {
+  background-color: #e5e5e5;   /* light gray panel behind content */
+  overflow: auto;              /* keeps footer from sliding up when floats are used */
+  font-family: Verdana, Arial, sans-serif;
+}
+
+/* General text inside main */
+main h2 { color: #373684; }
+main p  { line-height: 1.6; }
+
+/* “Hero” band on Home page (Step 14) */
+#hero { margin: 1rem 0; }
+
+/* Three lessons columns on Lessons page */
+#piano, #guitar, #violin {
+  box-sizing: border-box;
+  width: 32%;
+  float: left;
+  background: #fff;
+  padding: 1rem;
+  margin: 0 2% 2% 0;
+}
+#violin { margin-right: 0; }  /* last column in the row */
+
+/* Call-to-action highlight (Step 15) */
+.action {
+  background: #ffe66a;
+  color: #222;
+  font-weight: 700;
+  padding: .05em .35em;
+  border-radius: .2em;
+}
+
+/* Map border (Step 17) */
+.map {
+  border: 5px solid #373684;
+}
+
+/* =========================
+   Footer (Step 11)
+   ========================= */
+footer {
+  text-align: center;
+  font-size: .65em;
+  clear: left;                 /* keeps footer below the floated columns */
+}
+footer a {
+  color: #4645a8;
+  text-decoration: none;
+}
+
+/* (Step 12) separate rules with a blank line – already done above */
