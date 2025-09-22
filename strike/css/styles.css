@@ -157,3 +157,48 @@ footer a:hover{ text-decoration:underline; }
   nav li{ margin:0 .6rem; font-size:1.1rem; }
   iframe.map{ width: 100%; height: 320px; }
 }
+/* ===== Chapter 4 layout helpers ===== */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.panel {
+  background: #f3f1fc;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 0 0 1px #e9e6f7 inset;
+}
+
+/* Lessons page layout */
+.lessons-list {
+  margin-top: 1rem;
+}
+.lesson {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.lesson img {
+  width: 260px;           /* matches the book’s look */
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+.lesson h3 {
+  margin: 0 0 .35rem;
+}
+
+/* Contact map */
+.map {
+  display: block;
+  width: 480px;
+  height: 360px;
+  max-width: 100%;
+  margin: 1rem auto;      /* center */
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px #e9e6f7 inset;
+}
