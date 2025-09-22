@@ -1,108 +1,44 @@
-/* ------------------------------------------------------------------
-   Strike a Chord • Global Styles (Chapter 4 look)
-   ------------------------------------------------------------------ */
+/* --- Chapter 4 polish: center layout and tidy spacing --- */
 
-/* Reset / base */
-* { box-sizing: border-box; }
-html, body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
-img { max-width: 100%; height: auto; display: block; }
-ul { list-style: none; }
-
-:root{
-  --brand: #3a2e7a;     /* deep purple (nav/header) */
-  --brand-2:#4b3fad;    /* hover */
-  --ink:   #222;
-  --paper: #ffffff;
-  --panel: #f3f2ff;     /* light lavender panel */
-  --line:  #e6e6f2;
+/* keep each major section centered and limited in width */
+header, nav, main, footer {
+  max-width: 1100px;       /* tweak to taste (1000–1200px is fine) */
+  margin: 0 auto;
 }
 
-/* Body */
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--ink);
-  line-height: 1.5;
-  background: #fafafa;
-}
-
-/* Header + Nav appear as one bar (like Fig 4-81) */
-header, nav{
-  background: var(--brand);
-  color: #fff;
-}
-header{
-  padding: .75rem 1rem .25rem;
-}
-header h1{
-  font-size: 1.25rem;
-  font-style: italic;
-  margin: 0;                 /* remove gap between header & nav */
-}
-
-/* Nav */
-nav{ padding: .25rem 1rem .75rem; }
-nav ul{
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-nav li{ display: inline-block; }
-nav a{
-  color: #fff;
-  text-decoration: none;
-  padding: .35rem .5rem;
-  border-radius: 4px;
-}
-nav a:hover,
-nav a:focus{
-  background: var(--brand-2);
-  text-decoration: none;
-}
-
-/* Main panel (soft box behind content) */
-main{
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 1.25rem;
-  margin: 1rem;
-  box-shadow: 0 1px 2px rgba(0,0,0,.05);
-}
-
-/* Hero image block on Home */
-#hero{ margin: 0 0 1rem 0; }
-
-/* FREE badge from Ch.4 step 15 */
-.action{
-  background: #ffea8a;
-  padding: 0 .35rem;
-  border-radius: .25rem;
-  font-weight: 700;
-}
-
-/* Footer (light bar) */
-footer{
-  background: #f1f1f7;
-  padding: 1rem;
+/* header title like the book screenshot */
+header h1 {
   text-align: center;
-  border-top: 1px solid var(--line);
+  font-size: 3rem;         /* book asks ~3em */
+  font-style: italic;
+  margin: 0.25rem 0 0.5rem;
 }
-footer a{ color:#4645a8; text-decoration:none; }
-footer a:hover{ text-decoration: underline; }
 
-/* Lessons “cards” look (optional polish) */
-#piano, #guitar, #violin{
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 8px;
+/* navigation centered, larger, with comfy taps */
+nav ul { 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+nav li    { display: inline-block; font-size: 2rem; }
+nav a     { display: block; padding: 0.5rem 1rem; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+
+/* hero image and other images nicely centered and responsive */
+#hero img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+img       { max-width: 100%; height: auto; }
+
+/* soft panel look for main content (like the light lavender in the book) */
+main {
+  background: #f4f3ff;         /* subtle lavender panel */
   padding: 1rem;
-  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #ececf7 inset;
 }
 
-/* Contact map (make it responsive-friendly if class="map" is used) */
-.map{ width: 100%; height: auto; border: none; }
-
-/* Small helpers */
-h2{ margin: .25rem 0 .5rem; }
-h3{ margin: .5rem 0; }
-p + p{ margin-top: .5rem; }
+/* footer small and centered text already OK; just ensure spacing */
+footer { text-align: center; }
