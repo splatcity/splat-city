@@ -1,266 +1,196 @@
-/* ========== Base ========== */
-:root{
-  --brand:#372a7b;       /* deep purple header */
-  --brand-ink:#fff;      /* white on header */
-  --accent:#a98bff;      /* light purple accent for borders */
-  --panel:#f3f1ff;       /* very light purple panel bg */
-  --ink:#111;
-  --muted:#555;
-  --ring:#e0defa;
+/* ========== Base layout (desktop-first) ========== */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
-*{ box-sizing: border-box; }
-
-html,body{
-  margin:0;
-  padding:0;
+body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height:1.5;
-  color:var(--ink);
+  line-height: 1.5;
+  color: #222;
+  background: #f3f3f9;
 }
 
-/* ========== Page shell ========== */
-header{
-  background:var(--brand);
-  color:var(--brand-ink);
-  padding:0.75rem 1rem;
-}
-header h1{
-  margin:0;
-  text-align:center;
-  font-size:2.25rem;
-  font-weight:700;
-  font-style:italic;
+/* Header / Branding */
+header {
+  background: #372f7f; /* deep purple bar behind branding */
+  color: #fff;
 }
 
-/* Centered content column like the book */
-main{
-  max-width: 1000px;     /* matches the comp scale */
-  margin: 0 auto;        /* CENTER the page content */
-  padding: 0 1rem 2rem;
+header .brand {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.85rem 1rem;
+  text-align: center;
 }
 
-/* Light rounded “panel” behind page content (home hero, lessons groups, contact box) */
-.panel{
-  background:var(--panel);
-  border:1px solid var(--ring);
-  border-radius:10px;
-  padding:1rem;
+header h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
-/* ========== Nav ========== */
-nav{
-  background:#eee;
-  border-top: 3px solid #eae4ff;
-  border-bottom:1px solid #ddd;
-}
-nav ul{
-  list-style:none;
-  margin:0;
-  padding:0.75rem 0;
-  text-align:center;              /* center the links like the comp */
-}
-nav li{
-  display:inline-block;
-  font-size:1.4rem;               /* big link text (comp) */
-  margin:0 1.25rem;
-}
-nav a{
-  color:#5a2a9b;
-  text-decoration:none;
-}
-nav a:hover{
-  text-decoration:underline;
+/* Nav bar */
+nav {
+  background: #eeeeef;
+  border-bottom: 1px solid #e5e5ee;
 }
 
-/* ========== Typography helpers ========== */
-h2{
-  margin:0 0 .5rem 0;
-  font-size:1.25rem;
-}
-h3{
-  margin:1rem 0 .25rem 0;
-  font-size:1.1rem;
-}
-p{ margin:.5rem 0; }
-small{ color:var(--muted); }
-
-/* ========== Images & media ========== */
-img{
-  max-width:100%;
-  height:auto;
-  display:block;
-}
-
-/* Center the big home image and the sections on Lessons */
-.center{
-  margin-left:auto;
-  margin-right:auto;
-}
-
-figure{ margin:0; }
-
-/* Hero image wrapper on Home */
-#hero{
-  margin: 0 auto 0.75rem;
-}
-
-/* Intro paragraph (Home) */
-#intro{
-  margin:0 auto;
-}
-
-/* “FREE” highlight from Lab 4, Step 15 */
-.action{
-  background: #ffe86a;
-  padding: 0 .35rem;
-  border-radius: .3rem;
-  font-weight:700;
-}
-
-/* ========== Lessons page layout ========== */
-section.lesson-group{
-  background:var(--panel);
-  border:1px solid var(--ring);
-  border-radius:10px;
-  padding:1rem;
-  margin: 0 0 1rem 0;
-}
-section.lesson-group > img{
-  /* images centered & constrained so caption paragraph sits below like in the comp */
-  max-width: 620px;
-  margin: 0 auto .5rem;
-}
-
-/* ========== Contact page map ========== */
-/* Lab 4 shows a larger, centered map. */
-iframe.map{
-  display:block;
-  margin: .5rem auto 0;
-  border:0;
-  width: 520px;
-  height: 360px;
-}
-
-/* ========== Footer ========== */
-footer{
-  text-align:center;
-  background:#f6f5fb;
-  padding:1rem 1rem 2rem;
-  border-top:1px solid var(--ring);
-}
-footer a{ color:#5a2a9b; text-decoration:none; }
-footer a:hover{ text-decoration:underline; }
-
-/* Small screens: keep the centered column feel */
-@media (max-width: 560px){
-  nav li{ margin:0 .6rem; font-size:1.1rem; }
-  iframe.map{ width: 100%; height: 320px; }
-}
-/* ===== Chapter 4 layout helpers ===== */
-.container {
-  max-width: 980px;
+nav .nav-wrap {
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 1rem;
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0.9rem 0;
+  align-items: center;
+  justify-content: center;
+}
+
+nav li a {
+  color: #5a2fa3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav li a:hover,
+nav li a:focus { text-decoration: underline; }
+
+/* Main content wrapper */
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* Hero panel (desktop) */
+#hero {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(55,47,127,.08);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#hero img { max-width: 100%; height: auto; display: block; }
 
 .panel {
-  background: #f3f1fc;
-  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(55,47,127,.08);
   padding: 1rem 1.25rem;
-  box-shadow: 0 0 0 1px #e9e6f7 inset;
+  margin-bottom: 1rem;
 }
 
-/* Lessons page layout */
-.lessons-list {
-  margin-top: 1rem;
+/* Nice callout word (FREE) */
+.action {
+  background: #ffe676;
+  border-radius: 6px;
+  padding: 0 .3em;
+  font-weight: 700;
 }
-.lesson {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin: 1.5rem 0;
+
+/* Footer */
+footer {
+  max-width: 1120px;
+  margin: 0.5rem auto 2.5rem;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  color: #333;
+  background: #f0eff7;
+  border: 1px solid #e7e6f3;
+  border-radius: 10px;
 }
-.lesson img {
-  width: 260px;           /* matches the book’s look */
-  height: auto;
-  border-radius: 4px;
-  display: block;
-}
-.lesson h3 {
-  margin: 0 0 .35rem;
-}
+
+/* Lessons page images */
+#lessons img { max-width: 100%; height: auto; display: block; }
+
+/* Rounded helper */
+.round { border-radius: 8px; }
 
 /* Contact map */
-.map {
-  display: block;
-  width: 480px;
-  height: 360px;
-  max-width: 100%;
-  margin: 1rem auto;      /* center */
-  border: 0;
-  border-radius: 6px;
-  box-shadow: 0 0 0 1px #e9e6f7 inset;
-}
-/* ===== Responsive polish (small screens) ===== */
+.map { width: 720px; height: 420px; border: 0; }
 
-/* Narrow header title a touch on phones */
-@media (max-width: 700px) {
+/* Utility */
+.center { text-align: center; }
+
+/* Hide-on-mobile helper (populated by lab) */
+.tab-desk { /* default visible on desktop, hidden on mobile in media block */ }
+
+/* ========== Mobile viewport overrides (Lab 5–1) ========== */
+
+/* Fonts from Google: swap in Roboto and DM Serif Display when available */
+body { font-family: Roboto, Arial, Helvetica, sans-serif; }
+
+/* Mobile-first tweaks kick in under ~768px */
+@media (max-width: 768px) {
+
+  /* Hide desktop-only flourishes (music notes, hero) */
+  .tab-desk { display: none; }
+
   header h1 {
-    font-size: 1.35rem;
-    text-align: center;
-    margin: 0.5rem 0;
+    font-family: "DM Serif Display", serif;
+    font-style: normal;
+    font-size: 1.5em;
   }
-}
 
-/* Stack the nav horizontally on desktop (already),
-   vertically with larger tap targets on phones */
-@media (max-width: 700px) {
   nav ul {
-    display: block;
+    display: block;            /* stack */
     text-align: center;
-    padding: 0.25rem 0;
   }
   nav li {
-    display: inline-block;
-    margin: 0.15rem 0.35rem;
-    font-size: 1rem;
+    border-top: 1px solid #e5e9fc;
   }
-}
+  nav li a {
+    display: block;
+    padding: .6rem 1rem;
+    font-size: 1.1rem;
+  }
 
-/* Keep all main content centered with a gentle max width */
-main.container, .container {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
+  .action { font-size: 1.25em; }
 
-/* Lessons layout: row on wide screens (already); column on phones */
-@media (max-width: 900px) {
-  .lesson {
-    flex-direction: column;
-    align-items: center;
-    text-align: left; /* keep body text left for readability */
+  /* Lessons page: un-float and let sections stack full-width */
+  #piano, #guitar, #violin {
+    float: none;
+    width: auto;
   }
-  .lesson img {
-    width: 100%;
-    max-width: 480px;
-  }
-}
 
-/* Map: allow it to scale down cleanly */
-.map {
-  width: 640px;       /* big, centered on desktop */
-  height: 420px;
-}
-@media (max-width: 900px) {
-  .map {
-    width: 100%;
-    height: 360px;
+  /* “We provide” list slight left offset like the book shows */
+  #info ul { margin-left: 10%; }
+
+  /* Contact: big tap-to-call button */
+  .tel-link {
+    background-color: #373684;
+    padding: 2%;
+    margin: 0.5rem auto 1rem;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
   }
-}
-@media (max-width: 520px) {
-  .map {
-    height: 300px;
+  .tel-link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: block;
   }
+
+  /* Contact: scope email link color */
+  #contact .email-link {
+    color: #373684;
+    text-decoration: none;
+  }
+
+  /* Contact: responsive map size */
+  .map { width: 95%; height: 50vh; }
 }
