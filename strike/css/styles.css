@@ -202,3 +202,65 @@ footer a:hover{ text-decoration:underline; }
   border-radius: 6px;
   box-shadow: 0 0 0 1px #e9e6f7 inset;
 }
+/* ===== Responsive polish (small screens) ===== */
+
+/* Narrow header title a touch on phones */
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 1.35rem;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Stack the nav horizontally on desktop (already),
+   vertically with larger tap targets on phones */
+@media (max-width: 700px) {
+  nav ul {
+    display: block;
+    text-align: center;
+    padding: 0.25rem 0;
+  }
+  nav li {
+    display: inline-block;
+    margin: 0.15rem 0.35rem;
+    font-size: 1rem;
+  }
+}
+
+/* Keep all main content centered with a gentle max width */
+main.container, .container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Lessons layout: row on wide screens (already); column on phones */
+@media (max-width: 900px) {
+  .lesson {
+    flex-direction: column;
+    align-items: center;
+    text-align: left; /* keep body text left for readability */
+  }
+  .lesson img {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+/* Map: allow it to scale down cleanly */
+.map {
+  width: 640px;       /* big, centered on desktop */
+  height: 420px;
+}
+@media (max-width: 900px) {
+  .map {
+    width: 100%;
+    height: 360px;
+  }
+}
+@media (max-width: 520px) {
+  .map {
+    height: 300px;
+  }
+}
