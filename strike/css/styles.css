@@ -1,110 +1,47 @@
 /*
-  Author: Your Name
-  Date: 2025-09-13
+  Author: Jordan Martinez
+  Date: 2025-09-07
   File Name: styles.css
 */
 
-/* =========================
-   CSS Reset
-   (Step 6)
-   ========================= */
-body, header, nav, main, footer, img, h1 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+/* CSS Reset */
+body, header, nav, main, footer, img, h1 { margin: 0; padding: 0; border: 0; }
+img { max-width: 100%; height: auto; display: block; }
 
-/* (Step 7) – image rule  */
-img {
-  max-width: 100%;
-  display: block;
-}
+/* Base */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+body { font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #111; background: #fff; }
 
-/* =========================
-   Header (Step 8)
-   ========================= */
-header {
-  text-align: center;
-  font-size: 3em;
-  color: #373684;
-}
-header h1 { font-style: italic; }
+/* Header */
+header { background:#222; color:#fff; padding: 1rem 1.25rem; }
+header h1 { margin: 0; font-size: 1.5rem; font-style: italic; }
 
-/* =========================
-   Navigation (Step 9)
-   ========================= */
-nav {
-  background-color: #373684;
-}
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  text-align: center;
-}
-nav li {
-  display: inline-block;
-  font-size: 2em;
-}
-nav li a {
-  display: block;
-  color: #fff;
-  text-align: center;
-  padding: .5em 1em;
-  text-decoration: none;
-}
+/* Navigation */
+nav { background:#f2f2f2; padding: 0.5rem 1.25rem; }
+nav ul { list-style: none; margin: 0; padding: 0; text-align: left; }
+nav li { display: inline-block; }
+nav a { display: inline-block; margin-right: 1rem; color:#003355; text-decoration: none; font-weight: 600; }
+nav a:hover, nav a:focus { text-decoration: underline; }
 
-/* =========================
-   Main content (Step 10)
-   ========================= */
-main {
-  background-color: #e5e5e5;   /* light gray panel behind content */
-  overflow: auto;              /* keeps footer from sliding up when floats are used */
-  font-family: Verdana, Arial, sans-serif;
-}
+/* Layout */
+main { padding: 1.25rem; }
 
-/* General text inside main */
-main h2 { color: #373684; }
-main p  { line-height: 1.6; }
+/* Hero (home page image) */
+#hero { margin: 0 1.25rem; }
+#hero img { width: 100%; height: auto; }
 
-/* “Hero” band on Home page (Step 14) */
-#hero { margin: 1rem 0; }
+/* Highlighted word “FREE” */
+.action { background: #ffeb3b; padding: 0 .35em; border-radius: 4px; font-weight: 700; }
 
-/* Three lessons columns on Lessons page */
-#piano, #guitar, #violin {
-  box-sizing: border-box;
-  width: 32%;
-  float: left;
-  background: #fff;
-  padding: 1rem;
-  margin: 0 2% 2% 0;
-}
-#violin { margin-right: 0; }  /* last column in the row */
+/* Lessons content blocks */
+#info, #piano, #guitar, #violin { margin: 1rem 0; }
+#info ul { margin-left: 1.25rem; }
 
-/* Call-to-action highlight (Step 15) */
-.action {
-  background: #ffe66a;
-  color: #222;
-  font-weight: 700;
-  padding: .05em .35em;
-  border-radius: .2em;
-}
+/* Contact map */
+.map { width: 100%; aspect-ratio: 16 / 9; border: 0; }
 
-/* Map border (Step 17) */
-.map {
-  border: 5px solid #373684;
-}
-
-/* =========================
-   Footer (Step 11)
-   ========================= */
-footer {
-  text-align: center;
-  font-size: .65em;
-  clear: left;                 /* keeps footer below the floated columns */
-}
-footer a {
-  color: #4645a8;
-  text-decoration: none;
-}
-
-/* (Step 12) separate rules with a blank line – already done above */
+/* Footer */
+footer { background:#f9f9f9; padding: 1rem 1.25rem; border-top: 1px solid #eee; }
+footer a { color: #4645a8; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
