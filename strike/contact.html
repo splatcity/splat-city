@@ -22,23 +22,27 @@
     </ul>
   </nav>
 
-  <main>
-    <div class="panel">
+  <main class="container">
+    <section class="panel">
       <h2>Contact us today to schedule your first lesson.</h2>
-      <p>Phone Number: (814) 555-9228</p>
-      <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
-      <p>We are located at: 1122 Music Lane, Chicago, IL 60607</p>
+      <p><strong>Phone Number:</strong> (814) 555-9228</p>
+      <p><strong>Email:</strong> <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
+      <p><strong>We are located at:</strong> 1122 Music Lane, Chicago, IL 60607</p>
+
+      <!-- Centered, https (not http) embed to avoid mixed-content blocking -->
       <iframe
         class="map"
         src="https://www.google.com/maps?q=Chicago,IL&output=embed"
-        title="Map of Chicago, IL">
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
       </iframe>
-    </div>
+    </section>
   </main>
 
   <footer>
     <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
-    <p>© 2025 Strike a Chord</p>
+    <p>&copy; 2025 Strike a Chord</p>
   </footer>
 </body>
 </html>
