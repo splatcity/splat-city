@@ -1,47 +1,108 @@
-/*
-  Author: Jordan Martinez
-  Date: 2025-09-07
-  File Name: styles.css
-*/
+/* ------------------------------------------------------------------
+   Strike a Chord • Global Styles (Chapter 4 look)
+   ------------------------------------------------------------------ */
 
-/* CSS Reset */
-body, header, nav, main, footer, img, h1 { margin: 0; padding: 0; border: 0; }
+/* Reset / base */
+* { box-sizing: border-box; }
+html, body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
 img { max-width: 100%; height: auto; display: block; }
+ul { list-style: none; }
 
-/* Base */
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
-body { font-family: Arial, Helvetica, sans-serif; line-height: 1.5; color: #111; background: #fff; }
+:root{
+  --brand: #3a2e7a;     /* deep purple (nav/header) */
+  --brand-2:#4b3fad;    /* hover */
+  --ink:   #222;
+  --paper: #ffffff;
+  --panel: #f3f2ff;     /* light lavender panel */
+  --line:  #e6e6f2;
+}
 
-/* Header */
-header { background:#222; color:#fff; padding: 1rem 1.25rem; }
-header h1 { margin: 0; font-size: 1.5rem; font-style: italic; }
+/* Body */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  line-height: 1.5;
+  background: #fafafa;
+}
 
-/* Navigation */
-nav { background:#f2f2f2; padding: 0.5rem 1.25rem; }
-nav ul { list-style: none; margin: 0; padding: 0; text-align: left; }
-nav li { display: inline-block; }
-nav a { display: inline-block; margin-right: 1rem; color:#003355; text-decoration: none; font-weight: 600; }
-nav a:hover, nav a:focus { text-decoration: underline; }
+/* Header + Nav appear as one bar (like Fig 4-81) */
+header, nav{
+  background: var(--brand);
+  color: #fff;
+}
+header{
+  padding: .75rem 1rem .25rem;
+}
+header h1{
+  font-size: 1.25rem;
+  font-style: italic;
+  margin: 0;                 /* remove gap between header & nav */
+}
 
-/* Layout */
-main { padding: 1.25rem; }
+/* Nav */
+nav{ padding: .25rem 1rem .75rem; }
+nav ul{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+nav li{ display: inline-block; }
+nav a{
+  color: #fff;
+  text-decoration: none;
+  padding: .35rem .5rem;
+  border-radius: 4px;
+}
+nav a:hover,
+nav a:focus{
+  background: var(--brand-2);
+  text-decoration: none;
+}
 
-/* Hero (home page image) */
-#hero { margin: 0 1.25rem; }
-#hero img { width: 100%; height: auto; }
+/* Main panel (soft box behind content) */
+main{
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin: 1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
 
-/* Highlighted word “FREE” */
-.action { background: #ffeb3b; padding: 0 .35em; border-radius: 4px; font-weight: 700; }
+/* Hero image block on Home */
+#hero{ margin: 0 0 1rem 0; }
 
-/* Lessons content blocks */
-#info, #piano, #guitar, #violin { margin: 1rem 0; }
-#info ul { margin-left: 1.25rem; }
+/* FREE badge from Ch.4 step 15 */
+.action{
+  background: #ffea8a;
+  padding: 0 .35rem;
+  border-radius: .25rem;
+  font-weight: 700;
+}
 
-/* Contact map */
-.map { width: 100%; aspect-ratio: 16 / 9; border: 0; }
+/* Footer (light bar) */
+footer{
+  background: #f1f1f7;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+footer a{ color:#4645a8; text-decoration:none; }
+footer a:hover{ text-decoration: underline; }
 
-/* Footer */
-footer { background:#f9f9f9; padding: 1rem 1.25rem; border-top: 1px solid #eee; }
-footer a { color: #4645a8; text-decoration: none; }
-footer a:hover { text-decoration: underline; }
+/* Lessons “cards” look (optional polish) */
+#piano, #guitar, #violin{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Contact map (make it responsive-friendly if class="map" is used) */
+.map{ width: 100%; height: auto; border: none; }
+
+/* Small helpers */
+h2{ margin: .25rem 0 .5rem; }
+h3{ margin: .5rem 0; }
+p + p{ margin-top: .5rem; }
