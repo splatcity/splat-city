@@ -1,26 +1,25 @@
-/* -------------------------------------------------
-   Strike a Chord – unified stylesheet
+/* Strike a Chord – unified stylesheet
    Mobile-first with tablet/desktop media queries
-   ------------------------------------------------- */
+------------------------------------------------ */
 
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:wght@400;500;700&display=swap");
 
 /* Base */
-:root{
+:root {
   --purple:#373684;
   --purple-2:#2f2b75;
   --ink:#222;
   --ink-muted:#444;
   --panel:#ffffff;
-  --surface:#f3f3fb;
-  --accent:#e5e9ff;
+  --surface:#f5f5fb;
+  --accent:#e5e9fc;
   --border:#e1e1ef;
 }
 
-*{ box-sizing:border-box; }
+* { box-sizing:border-box; }
 
-html,body{
+html,body {
   margin:0;
   padding:0;
   font-family:Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
@@ -29,159 +28,129 @@ html,body{
   line-height:1.6;
 }
 
-img{ max-width:100%; height:auto; display:block; }
+/* Images scale properly */
+img { max-width:100%; height:auto; display:block; }
 
 /* Header + Title */
-header{
+header {
   background:var(--purple);
   color:#fff;
   padding:1.25rem 1rem 0.25rem;
   text-align:center;
 }
-header h1{
+header h1 {
   margin:0 0 .75rem;
   font-family:"DM Serif Display", serif;
   font-style:italic;
   font-size:1.75rem;
-  letter-spacing:.3px;
+  letter-spacing:.5px;
 }
 
 /* Nav – mobile big buttons by default */
-nav ul{
+nav ul {
   list-style:none;
   padding:0;
-  margin:0 0 .75rem;
+  margin:0 .75rem;
 }
-nav ul li{ margin:.5rem 1rem; }
-nav a{
+nav li {
+  margin:.5rem 0;
+}
+nav a {
   display:block;
-  text-decoration:none;
+  padding:.75rem;
   text-align:center;
-  background:var(--purple);
+  background:var(--purple-2);
   color:#fff;
-  padding:1rem 1.25rem;
-  border-radius:10px;
-  box-shadow:0 2px 0 rgba(0,0,0,.08);
+  text-decoration:none;
+  border-radius:8px;
   font-weight:500;
 }
+nav a:hover { background:#2d2a6c; }
 
-/* Panel blocks (centered content) */
-.panel{
+/* Panels */
+.panel {
   background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:1rem 1.25rem;
+  border:1px solid var(--accent);
+  border-radius:8px;
+  padding:1rem;
   margin:1rem auto;
-  max-width:980px;
+  max-width:900px;
+}
+.panel h2, 
+.panel p,
+#info, 
+#contact {
   text-align:center;
 }
-.panel h2{ margin:.25rem 0 1rem; font-weight:600; }
-.panel p{ margin:.5rem 0; color:var(--ink-muted); }
 
-/* Highlight (FREE) */
-.highlight{
-  background:#ffe98e;
-  padding:.1rem .35rem;
-  border-radius:4px;
-  font-weight:700;
+/* Hero banner image (desktop only) */
+.hero {
+  max-width:1100px;
+  margin:0.5rem auto 1.25rem auto;
 }
-
-/* Hero banner (desktop only by default) */
-.hero{ margin:1.25rem auto 0; max-width:1100px; }
-.desktop-only{ display:none; }
-.mobile-only{ display:block; }
-
-/* Utilities */
-.center{ text-align:center; }
-.round{ border-radius:8px; overflow:hidden; }
-
-/* Contact helpers (tel/email buttons on mobile lab) */
-.tel-link{
-  background:var(--purple);
-  color:#fff;
-  padding:2%;
-  margin:0 auto 1rem;
-  width:80%;
-  text-align:center;
-  border-radius:6px;
-}
-.tel-link a{
-  color:#fff;
-  text-decoration:none;
-  font-size:1.25rem;
+.hero img {
   display:block;
+  margin:0 auto;
+  border-radius:12px;
 }
 
-/* Map wrapper – keeps iframe centered and responsive */
-.map{
+/* Contact map styling */
+#contact .map {
+  display:block;
   width:95%;
-  height:50vh;
-  max-height:520px;
-  margin:0 auto;
-  border-radius:10px;
-  overflow:hidden;
-  border:1px solid var(--border);
-}
-.map iframe{
-  width:100%;
-  height:100%;
-  border:0;
+  height:450px;
+  margin:1rem auto;
+  border-radius:8px;
 }
 
 /* Footer */
-footer{
+footer {
   text-align:center;
-  padding:1.5rem .5rem 3rem;
-  color:#666;
+  font-size:.9rem;
+  color:var(--ink-muted);
+  padding:2rem 1rem;
 }
-footer a{ color:var(--purple-2); text-decoration:none; }
+footer a { color:var(--purple); }
 
-/* Hide tab-desk by default (shown on tablet/desktop) */
-.tab-desk{ display:none; }
-.mobile{ display:block; }
+/* Utility */
+.highlight { background:yellow; font-weight:bold; }
+.round { border-radius:12px; }
 
-/* ---------------- Tablet (≥550px) ---------------- */
-@media screen and (min-width:550px){
-  /* Show title music notes; hide mobile-only */
-  .tab-desk{ display:inline; }
-  .mobile{ display:none; }
-
-  /* Tablet nav: inline pills with separators */
-  nav ul{
-    display:flex;
-    justify-content:center;
-    gap:0;
-    margin:0 0 .75rem;
-  }
-  nav ul li{
+/* Responsive — Tablet */
+@media screen and (min-width: 550px) {
+  /* Nav horizontal layout */
+  nav ul { text-align:center; }
+  nav li {
+    display:inline-block;
     margin:0;
   }
-  nav ul li a{
+  nav a {
     border-radius:0;
-    padding:.75rem 1rem;
-    background:var(--purple-2);
-    border-right:1px solid #4b4696;
+    border-right:1px solid var(--accent);
+    font-size:1.25rem;
+    padding:.75rem 1.25rem;
   }
-  nav ul li:last-child a{ border-right:none; }
+  nav li:last-child a { border-right:none; }
 }
 
-/* ---------------- Desktop (≥769px) ---------------- */
-@media screen and (min-width:769px){
-  header{ padding:1.5rem 1rem .25rem; }
-  header h1{ font-size:2.1rem; }
+/* Responsive — Desktop */
+@media screen and (min-width: 769px) {
+  header { padding:2%; }
+  nav a:hover { background:var(--accent); color:var(--purple); }
+  main h2 { margin-top:0; }
+  main { font-size:1.1rem; }
 
-  /* Desktop: show hero banner */
-  .desktop-only{ display:block; }
-  .mobile-only{ display:none; }
-
-  /* Desktop nav hover */
-  nav ul li a{
-    transition:.15s ease;
+  /* Lesson thumbnails side by side */
+  #piano, #guitar, #violin {
+    width:29%;
+    float:left;
+    margin:0 2% 1rem 2%;
   }
-  nav ul li a:hover{
-    background:#454199;
-  }
+  #info ul { margin-left:5%; }
+}
 
-  /* Main content size tune */
-  main .panel{ font-size:1.05rem; }
+/* Print-friendly */
+@media print {
+  body { background:#fff; color:#000; }
+  nav, .hero { display:none; }
 }
