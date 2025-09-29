@@ -1,162 +1,210 @@
-/* -------------------------------------------------------
-   Strike a Chord • styles.css  (Mobile-first)
-   Author: Your Name
-   Date: 2025-09-07
-   ------------------------------------------------------- */
+/* -------------------------------------------------
+   Strike a Chord – styles.css
+   Mobile-first base (Week 5) + Week 6 media queries
+   ------------------------------------------------- */
 
-/* ========== CSS Reset ========== */
-body, header, nav, main, footer, ul, li, h1, h2, h3, p, img, div, section { 
-  margin:0; padding:0; border:0;
-}
-img { max-width:100%; height:auto; display:block; }
+/* Reset & base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; display: block; }
 
-/* ========== Design Tokens ========== */
 :root{
-  --blue: #2d3f92;               /* royal blue (matches figure) */
-  --blue-dk:#223172;
-  --blue-mid:#3f55a8;
-  --blue-lite:#e8ecff;
-  --text:#222;
-  --muted:#6b7280;
-  --panel:#f3f4ff;               /* light panel */
-  --ring:#9aa7e6;                /* outline/border */
-  --card:#ffffff;
-  --radius:10px;
-  --shadow:0 2px 10px rgba(0,0,0,.06);
+  --brand:#373684;          /* deep indigo */
+  --brand-2:#2d2b6a;        /* darker indigo for gradient */
+  --ink:#111;
+  --muted:#666;
+  --bg:#f3f2fa;             /* very light indigo/gray */
+  --panel:#ffffff;
+  --panel-border:#e5e9fc;
+  --link:#3a2ea5;
+  --link-hover:#222d7d;
 }
 
-/* ========== Base ========== */
-html { scroll-behavior:smooth; }
-body {
-  font-family: "Roboto", system-ui, -apple-system, Arial, sans-serif;
-  color:var(--text);
-  line-height:1.6;
-  background:#f6f7fb;
+body{
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
 }
 
-/* Hide desktop-only music notes on mobile per lab step */
-.tab-desk { display:none; }
-
-/* ========== Header / Title ========== */
-header {
-  background:linear-gradient(#2d3f92, #223172);
-  color:#fff;
-  padding:1.25rem 1rem .75rem;
-  text-align:center;
+/* Header / hero title */
+header{
+  background: var(--brand);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
 }
 header h1{
-  font-family:"DM Serif Display", Georgia, serif;
-  font-size:1.5em;              /* rubric asks to change to 1.5em */
-  font-style:italic;
-  letter-spacing:.5px;
+  margin: 0.25rem 0 0.75rem;
+  font-weight: 700;
+  font-size: 1.75rem;
 }
 
-/* ========== Stacked Nav Buttons (mobile) ========== */
-nav { background:#eee; }
+/* Top nav – mobile stacked buttons */
+nav{
+  background:#eee;
+  border-top: 1px solid var(--panel-border);
+}
 nav ul{
-  list-style:none;
-  margin:0 auto;
-  padding:.75rem 0;
-  max-width:540px;
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+  text-align: center;
 }
-nav li{ margin:.35rem 1rem; }
-nav a{
-  display:block;
-  background:var(--blue);
-  color:#fff;
-  text-decoration:none;
-  text-align:center;
-  padding:.65rem 1rem;
-  border-radius:8px;
-  box-shadow: var(--shadow);
+nav li{
+  display: block;
+  border-top: 1px solid var(--panel-border);
 }
-nav a:hover, nav a:focus{
-  background:var(--blue-mid);
+nav li a{
+  display: block;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+  color: var(--brand);
+  font-weight: 600;
+  border-radius: 10px;
+  margin: 0.35rem auto;
+  width: min(92%, 520px);
+  background: #fff;
+  box-shadow: 0 1px 0 #e9ecff inset, 0 1px 2px rgb(0 0 0 / 4%);
+}
+nav li a:focus,
+nav li a:active{
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
 }
 
-/* divide line like the figure under the title */
-.nav-divider{
-  height:1px;
-  background:linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+/* Panels / sections */
+main{
+  width: min(94%, 1100px);
+  margin: 1rem auto 3rem;
 }
-
-/* ========== Content Panels ========== */
-main{ padding:1rem .75rem 3.5rem; }
 .panel{
-  background:var(--panel);
-  border:1px solid var(--ring);
-  border-radius:var(--radius);
-  padding:1rem;
-  margin:1rem auto;
-  max-width:720px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 3%);
 }
-.panel h2{ font-size:1.15rem; margin-bottom:.5rem; }
-.panel p, .panel li{ font-size:1rem; }
+#hero{ margin-top: 0.75rem; }
 
-/* callout used for FREE span (lab step 10 modifies .action) */
+/* Utility visibility per spec */
+.tab-desk{ display: none; }   /* hidden on mobile, shown on ≥ tablet */
+.mobile { display: block; }
+
+/* Typographic helpers */
+h2, h3{ margin: 0.25rem 0 0.75rem; }
+h2{ font-size: 1.25rem; }
+h3{ font-size: 1.1rem; }
+
+/* “FREE” highlight */
 .action{
-  background:#fff5b1;
-  padding:.08em .35em;
-  border-radius:4px;
-  font-weight:700;
-  font-size:1.25em;              /* step 10 */
+  background: #fff2a8;
+  padding: 0 0.25em;
+  border-radius: 4px;
 }
 
-/* rounded images per lab step 13 + rule step 14 */
-.round{ border-radius:8px; }
-
-/* ========== Lessons specific ========== */
-#info ul{ margin-left:1.25rem; }
-#info ul{ margin-left:10%; }     /* step 12: left margin 10% */
-
-/* remove widths/floats for #piano, #guitar, #violin (step 11) */
-#piano img, #guitar img, #violin img{ width:100%; height:auto; float:none; }
-
-/* ========== Contact page ========== */
+/* Contact – phone pill on mobile */
 .tel-link{
-  background-color:var(--blue);
+  background: var(--brand);
   color:#fff;
-  padding:2%;
-  margin:0 auto 1rem;
-  width:80%;
-  text-align:center;
-  border-radius:5px;
+  padding: 0.9rem 1rem;
+  margin: 0.5rem auto 0.75rem;
+  width: min(92%, 520px);
+  text-align: center;
+  border-radius: 8px;
 }
 .tel-link a{
   color:#fff;
-  text-decoration:none;
-  font-size:1.5em;
-  display:block;
-}
-#contact .email-link{ text-align:left; } /* step 18 selector change */
-
-/* map step 19 */
-.map{
-  width:95%;
-  height:50vh;
-  border:1px solid var(--ring);
-  border-radius:8px;
-  display:block;
-  margin:1rem auto;
+  text-decoration: none;
+  font-size: 1.25rem;   /* week 5 set to 1.5rem; week 6 requires 1.25rem */
+  display: block;
 }
 
-/* center the contact text like the figure */
-.contact-center{ text-align:center; }
+/* Map iframe placeholder class */
+.map{ width: 100%; height: 350px; border: 0; }
 
-/* ========== Footer ========== */
+/* Footer */
 footer{
-  background:#f1f2fb;
-  border-top:1px solid #e5e9ff;
-  padding:1rem;
-  text-align:center;
-  color:var(--muted);
+  text-align: center;
+  color: var(--muted);
+  padding: 1.25rem 0 2rem;
 }
-footer a{ color:var(--blue); text-decoration:none; }
 
-/* ========== Tablet/Desktop enhancements (kept minimal) ========== */
-@media (min-width: 768px){
-  header h1{ font-size:2rem; }
-  nav ul{ display:flex; gap:.75rem; justify-content:center; max-width:900px; }
-  nav li{ margin:0; flex:0 1 160px; }
-  main{ padding:1.25rem 1rem 4rem; }
+/* =================================================
+   MEDIA QUERY – TABLET view (and print)
+   min-width: 550px
+   ================================================= */
+@media screen and (min-width: 550px), print{
+
+  /* Show desktop bits, hide mobile bits (Step 2) */
+  .tab-desk{ display: block; }
+  .mobile { display: none; }
+  header h1 span.tab-desk{ display: inline; }
+
+  /* Tablet nav (Steps 3,4,5) */
+  nav ul{
+    border-top: none;
+    text-align: center;
+  }
+  nav li{
+    display: inline-block;
+    border-top: none;
+    font-size: 1.5em;
+    border-right: 1px solid var(--panel-border);
+  }
+  nav li:last-child{ border-right: none; }
+  nav li a{
+    margin: 0.4rem 0.25rem 0.6rem;
+    width: auto;
+    padding: 0.25rem 0.5rem;      /* step 5 top/bottom .25em / left+right .5em */
+    border-radius: 8px;
+  }
+
+  /* Tablet map size (Step 8) */
+  .map{ width: 500px; height: 450px; margin: 0.5rem 0; }
+}
+
+/* =================================================
+   MEDIA QUERY – DESKTOP view (and print)
+   min-width: 769px
+   ================================================= */
+@media screen and (min-width: 769px), print{
+
+  /* Header spacing (Step 10) */
+  header{ padding: 2%; }
+
+  /* Desktop nav with hover + subtle gradient (Steps 11 & rubric) */
+  nav{
+    background: linear-gradient(180deg, var(--brand) 0%, var(--brand-2) 100%);
+  }
+  nav li{ padding: 0.5em 1.5em; }
+  nav li a{
+    color:#fff;
+    background: transparent;
+    border-radius: 6px;
+    box-shadow: none;
+  }
+  nav li a:hover{                 /* pseudo-class hover (Step 11) */
+    color: var(--brand);
+    background: var(--panel-border);
+  }
+
+  /* Main content tweaks (Step 12) */
+  #info ul{ margin-left: 5%; }
+  main h3{ font-size: 1.5em; }
+
+  /* Three columns on Lessons (Step 12c) */
+  #piano, #guitar, #violin{
+    width: 29%;
+    float: left;
+    margin: 0 2% 0 0;           /* left/right 2% (rightmost will wrap below) */
+  }
+  #violin{ margin-right: 0; }
+}
+
+/* =================================================
+   PRINT media query (Steps 9, 13, 14)
+   ================================================= */
+@media print{
+  body{ background:#fff; color:#000; }
 }
