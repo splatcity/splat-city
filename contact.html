@@ -1,60 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — SPLAT City</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <title>Strike a Chord | Contact</title>
+  <link rel="stylesheet" href="css/styles_v3.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <header role="banner">
-    <div class="container">
-      <h1 class="brand"><a href="../index.html">SPLAT <span aria-hidden="true">City</span></a></h1>
-      <nav aria-label="Primary">
-        <ul class="nav">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="collection.html">Collection</a></li>
-          <li><a href="journal.html">Journal</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <h1><span class="tab-desk">&#9836;</span> Strike a Chord <span class="tab-desk">&#9836;</span></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="main" tabindex="-1">
-    <section>
-      <!-- This id is what your CSS targets -->
-      <div id="contact" class="container">
-        <h2>Contact us today to schedule your first lesson.</h2>
-        <p>Phone Number: (814) 555-9228</p>
-        <p>
-          Email:
-          <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a>
-        </p>
-        <p>We are located at: 1122 Music Lane, Chicago, IL 60007</p>
+  <main>
+    <section class="panel">
+      <h2>Contact us today to schedule your first lesson.</h2>
 
-        <iframe
-          title="Map of Chicago, IL"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.801143086625!2d-87.6297986!3d41.8781136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c2b2f1234%3A0x123456789abcdef!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1631578184860"
-          width="600" height="360" style="border:0;" allowfullscreen loading="lazy">
-        </iframe>
-      </div>
+      <!-- Mobile-friendly call button (from Lab 5) -->
+      <p class="tel-link">
+        <a href="tel:814-555-9228">(814) 555-9228</a>
+      </p>
+
+      <p>Email: <a class="email-link" href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
+      <p>We are located at: 1122 Music Lane, Chicago, IL 60607</p>
+
+      <iframe
+        class="map"
+        src="https://www.google.com/maps?q=Chicago,IL&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Map of Chicago, IL"
+      ></iframe>
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <div class="container">
-      <small>&copy; 2025 Jordan Martinez • SPLAT City</small>
-      <nav aria-label="Footer">
-        <ul class="footer-nav">
-          <li><a href="accessibility.html">Accessibility</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-        </ul>
-      </nav>
-    </div>
+  <footer>
+    <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
+    <p>&copy; 2025 Strike a Chord</p>
   </footer>
 </body>
 </html>
