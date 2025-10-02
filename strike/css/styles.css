@@ -1,204 +1,289 @@
 /* -------------------------------------------------
-   Strike a Chord — unified stylesheet
-   Mobile-first with tablet/desktop media queries
+   Strike a Chord — stylesheet v3
+   Mobile-first responsive design
 -------------------------------------------------- */
 
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:wght@400;500;700&display=swap');
 
-/* Theme variables */
-:root{
-  --purple:#373684;
-  --ink:#222;
-  --ink-muted:#444;
-  --panel:#ffffff;
-  --surface:#f5f5fb;
-  --accent:#e5e9fc;
-  --border:#e0e7ff;
+:root {
+  --purple: #373684;
+  --ink: #222;
+  --ink-muted: #444;
+  --surface: #f5f5fb;
+  --panel: #ffffff;
+  --panel-border: #e5e9fc;
+  --accent: #e5e9fc;
 }
 
-/* Reset + defaults */
-*{ box-sizing:border-box; }
-html,body{ margin:0; padding:0; }
-body{
-  font-family:Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
-  color:var(--ink);
-  background:var(--surface);
-  line-height:1.6;
-}
-img{ max-width:100%; height:auto; display:block; }
-
-/* Header + Title */
-header{
-  background:var(--purple);
-  color:#fff;
-  padding:1.25rem 1rem 0.25rem;
-  text-align:center;
-}
-header h1{
-  margin:0 0 .5rem;
-  font-family:"DM Serif Display", serif;
-  font-weight:400;
-  font-style:italic;
-  font-size:1.75rem;
-  letter-spacing:.5px;
+/* Style rules for mobile viewport */
+* {
+  box-sizing: border-box;
 }
 
-/* Nav — mobile big buttons by default */
-nav ul{
-  list-style:none;
-  padding:0;
-  margin:.5rem 0 .75rem;
-  display:grid;
-  gap:.75rem;
-}
-nav a{
-  display:block;
-  background:#fff;
-  color:var(--purple);
-  text-decoration:none;
-  font-weight:600;
-  padding:.9rem 1.1rem;
-  border-radius:12px;
-  border:1px solid var(--border);
-  box-shadow:0 1px 2px rgba(0,0,0,.05);
-  text-align:center;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-/* Hero image
-   - hidden on mobile (shown on desktop only) */
-.hero{ display:none; }
-.hero.desktop-only{
-  /* desktop will switch to block + centering in media query */
+body {
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  background: var(--surface);
+  color: var(--ink);
+  line-height: 1.6;
 }
 
-/* Main + panels */
-main{
-  max-width:1100px;
-  margin:0 auto;
-  padding:1rem .75rem 2.5rem;
-}
-.panel{
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:1rem 1.25rem;
-  margin:1rem auto;
-  box-shadow:0 1px 2px rgba(0,0,0,.04);
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  border: 0;
 }
 
-/* Home: highlight FREE tag */
-.highlight{
-  background:#fff3b0;
-  padding:.05rem .35rem;
-  border-radius:.35rem;
-  font-weight:700;
+header {
+  background: var(--purple);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem 1rem;
 }
 
-/* Round corners helper (for lesson images) */
-.round{ border-radius:8px; }
-
-/* Contact panel + tel/email buttons (mobile-first) */
-#contact .tel-link{
-  background:var(--purple);
-  color:#fff;
-  text-decoration:none;
-  display:block;
-  width:80%;
-  max-width:420px;
-  margin:0.5rem auto 1rem;
-  padding:.65rem 1rem;
-  text-align:center;
-  border-radius:6px;
-  font-size:1.1rem;
-  font-weight:600;
-}
-#contact .email-link{ color:var(--purple); text-decoration:none; font-weight:600; }
-
-/* Google map */
-.map{
-  display:block;
-  width:95%;
-  height:350px;
-  margin:1rem auto;
-  border:1px solid var(--border);
-  border-radius:10px;
+header h1 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
+  font-size: 1.75rem;
+  letter-spacing: 0.5px;
 }
 
-/* ---------- Tablet (≥ 550px) ---------- */
-@media screen and (min-width:550px){
-  /* swap title bits for tablet/desktop if you’re using .tab-desk spans */
-  .tab-desk{ display:inline; }
-  .mobile{ display:none; }
-
-  /* Tablet nav row */
-  nav ul{
-    grid-template-columns: repeat(5, 1fr);
-    gap:.5rem;
-  }
-  nav a{
-    padding:.7rem .8rem;
-    border-radius:8px;
-  }
-
-  /* Tablet map size per lab */
-  .map{ width:500px; height:450px; }
+/* Hide tab-desk class */
+.tab-desk {
+  display: none;
 }
 
-/* ---------- Desktop (≥ 769px) ---------- */
-@media screen and (min-width:769px){
-  header{ padding:1rem 1rem 0; }
-  header h1{ font-size:2.1rem; }
+nav ul {
+  list-style: none;
+  margin: 1rem auto 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
 
-  /* Desktop nav: pill tabs */
-  nav ul{
-    max-width:980px;
-    margin:.5rem auto 1rem;
-    grid-template-columns: repeat(5, 1fr);
-    gap:0;
-    border-radius:8px;
-    overflow:hidden;
-  }
-  nav a{
-    background:linear-gradient(#ffffff,#f3f4ff);
-    border:1px solid var(--purple);
-    border-left:none;
-    padding:.6rem .75rem;
-    border-radius:0;
-  }
-  nav li:first-child a{ border-left:1px solid var(--purple); }
-  nav a:hover{
-    background:var(--purple);
-    color:#fff;
-  }
+nav li {
+  margin: 0;
+}
 
-  /* Show and center the big banner on desktop */
-  .hero.desktop-only{
-    display:block;
-    max-width:1100px;
-    margin:0 auto 0.75rem;
+nav a {
+  display: block;
+  text-decoration: none;
+  background: #ffffff;
+  color: var(--purple);
+  font-weight: 600;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero {
+  display: none;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  font-size: 1rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.25rem auto;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.panel ul {
+  text-align: left;
+  padding-left: 1.15rem;
+}
+
+.highlight {
+  background: #fff3b0;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.35rem;
+  font-weight: 700;
+}
+
+.round {
+  border-radius: 12px;
+}
+
+.tel-link {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.tel-link a {
+  display: inline-block;
+  background: var(--purple);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(55, 54, 132, 0.25);
+}
+
+.email-link {
+  color: var(--purple);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.map {
+  width: 95%;
+  height: 50vh;
+  max-width: 500px;
+  max-height: 450px;
+  border: 0;
+  border-radius: 12px;
+  margin: 0 auto;
+  display: block;
+}
+
+footer {
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  padding: 2rem 1rem 3rem;
+}
+
+footer a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+/* Tablet viewport */
+@media screen and (min-width: 550px), print {
+  .tab-desk {
+    display: inline;
   }
 
-  /* Make panels a bit wider + center them */
-  .panel{ max-width:980px; }
+  .mobile-only {
+    display: none;
+  }
 
-  /* Center section headings without centering all text */
-  .panel h2, .panel h3, #contact h2{ text-align:center; }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 960px;
+    background: #ffffff;
+    border-radius: 999px;
+    border: 1px solid var(--panel-border);
+    overflow: hidden;
+  }
 
-  /* Contact map a bit wider on desktop */
-  .map{ width:720px; height:460px; }
+  nav li {
+    flex: 1;
+  }
+
+  nav li:not(:last-child) {
+    border-right: 1px solid var(--panel-border);
+  }
+
+  nav a {
+    border-radius: 0;
+    border: none;
+    padding: 0.85rem 1rem;
+    background: transparent;
+  }
+
+  nav a:hover,
+  nav a:focus {
+    background: #e5e9fc;
+    color: #373684;
+  }
+
+  main {
+    font-size: 1.1rem;
+  }
+
+  .panel {
+    text-align: left;
+    padding: 1.5rem 2rem;
+  }
+
+  .panel h2,
+  .panel h3 {
+    text-align: center;
+  }
+
+  .map {
+    width: 500px;
+    height: 450px;
+  }
 }
 
-/* ---------- Special: remove duplicate bottom banner on Home ---------- */
-/* If an image that repeats the banner was left inside a .panel, hide it
-   without affecting lesson/instrument images */
-main .panel > img[alt*="Colorful music notes"]{ display:none; }
+/* Desktop viewport */
+@media screen and (min-width: 769px) {
+  header {
+    padding: 2rem 1rem 1.5rem;
+  }
 
-/* Footer */
-footer{
-  text-align:center;
-  color:var(--ink-muted);
-  font-size:.9rem;
-  padding:1.5rem .75rem 2.5rem;
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  main {
+    font-size: 1.4rem;
+  }
+
+  .hero.desktop-only {
+    display: block;
+    max-width: 960px;
+    margin: 2rem auto 1.5rem;
+    text-align: center;
+  }
+
+  .hero.desktop-only img {
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  }
 }
-footer a{ color:var(--purple); text-decoration:none; }
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  header,
+  nav,
+  main,
+  footer,
+  .panel {
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+
+  nav a {
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #000000;
+  }
+
+  .hero.desktop-only {
+    display: none !important;
+  }
+}
