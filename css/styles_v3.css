@@ -1,290 +1,196 @@
-/* Hosting deployment copy of Strike a Chord stylesheet v3 */
-/* -------------------------------------------------
-   Strike a Chord — stylesheet v3
-   Mobile-first responsive design
--------------------------------------------------- */
+/* --------------------------------------------------
+   Strike a Chord — styles v3 (cumulative)
+   Mobile-first, responsive + Lab 7 semantics & grid
+---------------------------------------------------*/
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:wght@400;500;700&display=swap');
 
+/* Theme */
 :root {
-  --purple: #373684;
-  --ink: #222;
-  --ink-muted: #444;
-  --surface: #f5f5fb;
-  --panel: #ffffff;
-  --panel-border: #e5e9fc;
-  --accent: #e5e9fc;
+  --purple:#373684;
+  --ink:#222;
+  --ink-muted:#444;
+  --panel:#ffffff;
+  --surface:#f5f5fb;
+  --accent:#5e90fc;
+  --border:#e6e6ef;
 }
 
-/* Style rules for mobile viewport */
-* {
-  box-sizing: border-box;
+/* Reset-ish */
+* { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+img { max-width:100%; height:auto; display:block; }
+
+/* Base */
+body{
+  font-family:Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--surface);
+  line-height:1.6;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
+/* Header */
+header{
+  background:var(--purple);
+  color:#fff;
+  padding:1.25rem 1rem .5rem;
+  text-align:center;
+}
+header h1{
+  margin:.25rem 0 1rem;
+  font-family:"DM Serif Display", serif;
+  font-style:italic;
+  letter-spacing:.3px;
+  font-size:1.75rem;
 }
 
-body {
-  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
-  background: var(--surface);
-  color: var(--ink);
-  line-height: 1.6;
+/* Mobile nav: large rounded buttons */
+nav ul{
+  list-style:none;
+  margin:0 auto;
+  padding:0;
+  display:grid;
+  gap:.75rem;
+  width:min(800px, 92vw);
+}
+nav a{
+  display:block;
+  text-decoration:none;
+  color:var(--ink);
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:.85rem 1.25rem;
+  font-weight:500;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.05);
+}
+nav a:hover{ background:#fafaff; }
+
+/* Page section panel */
+.panel{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:14px;
+  width:min(820px, 92vw);
+  margin:2rem auto;
+  padding:1.25rem 1.5rem;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
 }
 
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-  border: 0;
+/* Footer */
+footer{
+  text-align:center;
+  color:var(--ink-muted);
+  margin:1.25rem 0 2.25rem;
+  font-size:.9rem;
+}
+footer a{ color:var(--ink); }
+
+/* Desktop-only hero on Home */
+.hero.desktop-only{
+  display:none;
+}
+.hero img.round{
+  border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
 }
 
-header {
-  background: var(--purple);
-  color: #ffffff;
-  text-align: center;
-  padding: 1.5rem 1rem 1rem;
+/* Instructors (Lab 7) */
+main.grid{
+  width:min(980px, 92vw);
+  margin:2rem auto;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+}
+main.grid > aside{
+  text-align:center;
+  font-size:1.05rem;
+  font-weight:600;
+  color:#373684;
+  text-shadow:3px 3px 10px #a8b0cb;
 }
 
-header h1 {
-  font-family: 'DM Serif Display', serif;
-  font-weight: 400;
-  font-style: italic;
-  margin: 0;
-  font-size: 1.75rem;
-  letter-spacing: 0.5px;
+/* Figures */
+figure{
+  position:relative;
+  max-width:375px;
+  margin:2rem auto;
+  border:3px solid #373684;
+  background:#fff;
+}
+figcaption{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  color:#fff;
+  background:rgba(55,84,132,.7);
+  padding:5% 0;
+  text-align:center;
+  font-family:Verdana, Arial, sans-serif;
+  font-size:1.05rem;
+  font-weight:bold;
 }
 
-/* Hide tab-desk class */
-.tab-desk {
-  display: none;
+/* Contact map wrapper (center) */
+.map-wrap{
+  width:min(820px, 92vw);
+  margin:2rem auto;
+}
+.map-wrap iframe{
+  width:100%;
+  height:340px;
+  border:0;
+  border-radius:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
 }
 
-nav ul {
-  list-style: none;
-  margin: 1rem auto 1.5rem;
-  padding: 0;
-  display: grid;
-  gap: 0.75rem;
-}
+/* Tablet (>= 620px) */
+@media (min-width:620px){
+  header h1{ font-size:2rem; }
 
-nav li {
-  margin: 0;
-}
-
-nav a {
-  display: block;
-  text-decoration: none;
-  background: #ffffff;
-  color: var(--purple);
-  font-weight: 600;
-  padding: 0.9rem 1.1rem;
-  border-radius: 12px;
-  border: 1px solid var(--panel-border);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.hero {
-  display: none;
-}
-
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1.5rem 1rem 3rem;
-  font-size: 1rem;
-}
-
-.panel {
-  background: var(--panel);
-  border: 1px solid var(--panel-border);
-  border-radius: 12px;
-  padding: 1.25rem;
-  margin: 1.25rem auto;
-  text-align: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-}
-
-.panel ul {
-  text-align: left;
-  padding-left: 1.15rem;
-}
-
-.highlight {
-  background: #fff3b0;
-  padding: 0.1rem 0.4rem;
-  border-radius: 0.35rem;
-  font-weight: 700;
-}
-
-.round {
-  border-radius: 12px;
-}
-
-.tel-link {
-  margin: 1.5rem auto;
-  text-align: center;
-}
-
-.tel-link a {
-  display: inline-block;
-  background: var(--purple);
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0.75rem 1.75rem;
-  border-radius: 999px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  box-shadow: 0 3px 8px rgba(55, 54, 132, 0.25);
-}
-
-.email-link {
-  color: var(--purple);
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.map {
-  width: 95%;
-  height: 50vh;
-  max-width: 500px;
-  max-height: 450px;
-  border: 0;
-  border-radius: 12px;
-  margin: 0 auto;
-  display: block;
-}
-
-footer {
-  text-align: center;
-  color: var(--ink-muted);
-  font-size: 0.95rem;
-  padding: 2rem 1rem 3rem;
-}
-
-footer a {
-  color: var(--purple);
-  text-decoration: none;
-}
-
-/* Tablet viewport */
-@media screen and (min-width: 550px), print {
-  .tab-desk {
-    display: inline;
+  nav ul{
+    grid-template-columns:repeat(2, 1fr);
   }
 
-  .mobile-only {
-    display: none;
+  main.grid{
+    grid-template-columns:1fr 1fr;
+    gap:18px;
   }
-
-  nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    max-width: 960px;
-    background: #ffffff;
-    border-radius: 999px;
-    border: 1px solid var(--panel-border);
-    overflow: hidden;
-  }
-
-  nav li {
-    flex: 1;
-  }
-
-  nav li:not(:last-child) {
-    border-right: 1px solid var(--panel-border);
-  }
-
-  nav a {
-    border-radius: 0;
-    border: none;
-    padding: 0.85rem 1rem;
-    background: transparent;
-  }
-
-  nav a:hover,
-  nav a:focus {
-    background: #e5e9fc;
-    color: #373684;
-  }
-
-  main {
-    font-size: 1.1rem;
-  }
-
-  .panel {
-    text-align: left;
-    padding: 1.5rem 2rem;
-  }
-
-  .panel h2,
-  .panel h3 {
-    text-align: center;
-  }
-
-  .map {
-    width: 500px;
-    height: 450px;
-  }
+  /* Make aside span full width on first row if you want:
+     grid-column:1 / span 2;  (uncomment if preferred) */
 }
 
-/* Desktop viewport */
-@media screen and (min-width: 769px) {
-  header {
-    padding: 2rem 1rem 1.5rem;
+/* Desktop (>= 1000px) */
+@media (min-width:1000px){
+  header{ padding:1.25rem 0 .25rem; }
+  header h1{ font-size:2.15rem; }
+
+  /* Desktop nav: single row */
+  nav ul{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+  }
+  nav a{ width:9.25rem; }
+
+  /* Show hero only on desktop */
+  .hero.desktop-only{
+    display:block;
+    width:min(1100px, 94vw);
+    margin:1.75rem auto 0;
   }
 
-  header h1 {
-    font-size: 2.5rem;
+  main.grid{
+    grid-template-columns:repeat(4, 1fr);
   }
-
-  main {
-    font-size: 1.4rem;
+  main.grid > aside{
+    grid-column:1 / span 4;  /* heading spans all columns on desktop */
+    font-size:1.25rem;
   }
-
-  .hero.desktop-only {
-    display: block;
-    max-width: 960px;
-    margin: 2rem auto 1.5rem;
-    text-align: center;
-  }
-
-  .hero.desktop-only img {
-    margin: 0 auto;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-  }
-}
-
-@media print {
-  body {
-    background: #ffffff;
-    color: #000000;
-  }
-
-  header,
-  nav,
-  main,
-  footer,
-  .panel {
-    background: #ffffff !important;
-    color: #000000 !important;
-    box-shadow: none !important;
-  }
-
-  nav a {
-    color: #000000;
-    background: #ffffff;
-    border: 1px solid #000000;
-  }
-
-  .hero.desktop-only {
-    display: none !important;
-  }
+  figcaption{ font-size:1rem; }
 }
