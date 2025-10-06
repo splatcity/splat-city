@@ -1,150 +1,198 @@
-/* Strike a Chord – stylesheet v3 */
-/* Mobile-first responsive design */
+/* --------------------------------------------------
+   Strike a Chord — styles v3 (cumulative)
+   Mobile-first, responsive + Lab 7 semantics & grid
+---------------------------------------------------*/
 
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:wght@400;500;700&display=swap');
 
+/* Theme */
 :root {
-  --purple: #373684;
-  --ink: #222;
-  --muted: #444;
-  --surface: #f5f5fb;
-  --panel: #ffffff;
-  --accent: #e56f9c;
-  --link: #37568d;
+  --purple:#373684;
+  --ink:#222;
+  --ink-muted:#444;
+  --panel:#ffffff;
+  --surface:#f5f5fb;
+  --accent:#5e90fc;
+  --border:#e6e6ef;
 }
 
-/* Reset */
+/* Reset-ish */
 * { box-sizing: border-box; }
+html, body { margin:0; padding:0; }
+img { max-width:100%; height:auto; display:block; }
 
-html {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Roboto', system-ui, Arial, sans-serif;
-  background-color: var(--surface);
-  color: var(--ink);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  height: auto;
+/* Base */
+body{
+  font-family:Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--surface);
+  line-height:1.6;
 }
 
 /* Header */
-header {
-  background-color: var(--purple);
-  text-align: center;
-  color: #fff;
-  padding: 1rem 0;
+header{
+  background:var(--purple);
+  color:#fff;
+  padding:1.25rem 1rem .5rem;
+  text-align:center;
+}
+header h1{
+  margin:.25rem 0 1rem;
+  font-family:"DM Serif Display", serif;
+  font-style:italic;
+  letter-spacing:.3px;
+  font-size:1.75rem;
 }
 
-header h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 2rem;
-  margin: 0;
+/* Mobile nav: large rounded buttons */
+nav ul{
+  list-style:none;
+  margin:0 auto;
+  padding:0;
+  display:grid;
+  gap:.75rem;
+  width:min(800px, 92vw);
 }
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+nav a{
+  display:block;
+  text-decoration:none;
+  color:var(--ink);
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:.85rem 1.25rem;
+  font-weight:500;
+  text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.05);
 }
+nav a:hover{ background:#fafaff; }
 
-nav a {
-  text-decoration: none;
-  color: #fff;
-  background: var(--link);
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  transition: background 0.3s;
-}
-
-nav a:hover {
-  background-color: var(--accent);
-}
-
-/* Panels */
-section.panel {
-  background-color: var(--panel);
-  margin: 2rem auto;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  width: 80%;
-  max-width: 800px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* Page section panel */
+.panel{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:14px;
+  width:min(820px, 92vw);
+  margin:2rem auto;
+  padding:1.25rem 1.5rem;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
 }
 
 /* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: var(--muted);
-  font-size: 0.9rem;
+footer{
+  text-align:center;
+  color:var(--ink-muted);
+  margin:1.25rem 0 2.25rem;
+  font-size:.9rem;
+}
+footer a{ color:var(--ink); }
+
+/* Desktop-only hero on Home */
+.hero.desktop-only{ display:none; }
+.hero img.round{
+  border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
 }
 
-/* --- Instructor Page Styles --- */
-
-/* Mobile View */
-aside {
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #37568d;
-  text-shadow: 3px 3px 10px #8280cb;
+/* ------------ Instructors (Lab 7) ------------ */
+main.grid{
+  width:min(980px, 92vw);
+  margin:2rem auto;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  justify-items:center;    /* center figures horizontally */
+}
+main.grid > aside{
+  text-align:center;
+  font-size:1.05rem;
+  font-weight:600;
+  color:#373684;
+  text-shadow:3px 3px 10px #a8b0cb;
 }
 
-figure {
-  position: relative;
-  max-width: 375px;
-  margin: 2rem auto;
-  border: 3px solid #37568d;
+/* Figures */
+figure{
+  position:relative;
+  max-width:375px;
+  margin:1.25rem auto;
+  border:3px solid #373684;
+  background:#fff;
+}
+figcaption{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  color:#fff;
+  background:rgba(55,84,132,.7);
+  padding:5% 0;
+  text-align:center;
+  font-family:Verdana, Arial, sans-serif;
+  font-size:1.05rem;
+  font-weight:bold;
 }
 
-figcaption {
-  position: absolute;
-  bottom: 0;
-  background: rgba(55, 84, 132, 0.7);
-  color: #fff;
-  width: 100%;
-  padding: 5% 0;
-  text-align: center;
-  font-family: Verdana, Arial, sans-serif;
-  font-size: 1.5em;
-  font-weight: bold;
+/* ------------ Lessons gallery ------------ */
+.cards{
+  width:min(1100px, 94vw);
+  margin:1.5rem auto 0;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  justify-items:center;
+}
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  width:100%;
+  max-width:340px;
+  overflow:hidden;
+  box-shadow:0 8px 18px rgba(0,0,0,.06);
+}
+.card img{ width:100%; display:block; }
+.card .pad{ padding:0.9rem 1rem; }
+.card h3{ margin:.25rem 0 .35rem; }
+.card p{ margin:.25rem 0 0; color:var(--ink-muted); }
+
+/* ------------ Contact map ------------ */
+.map-wrap{
+  width:min(1100px, 94vw);   /* wider and centered */
+  margin:1.5rem auto 0;
+}
+.map-wrap iframe{
+  width:100%;
+  height:320px;
+  border:0;
+  border-radius:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
 }
 
-/* Tablet View */
-@media (min-width: 620px) {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  aside {
-    grid-column: 1 / span 2;
-  }
+/* Tablet (>= 620px) */
+@media (min-width:620px){
+  header h1{ font-size:2rem; }
+  nav ul{ grid-template-columns:repeat(2, 1fr); }
+
+  main.grid{ grid-template-columns:1fr 1fr; gap:18px; }
+
+  .cards{ grid-template-columns:repeat(2, 1fr); }
+  .map-wrap iframe{ height:380px; }
 }
 
-/* Desktop View */
-@media (min-width: 1000px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  figcaption {
-    font-size: 1em;
-  }
-  aside {
-    grid-column: 1 / span 4;
-  }
+/* Desktop (>= 1000px) */
+@media (min-width:1000px){
+  header{ padding:1.25rem 0 .25rem; }
+  header h1{ font-size:2.15rem; }
+  nav ul{ display:flex; justify-content:center; align-items:center; gap:1rem; }
+  nav a{ width:9.25rem; }
+
+  .hero.desktop-only{ display:block; width:min(1100px, 94vw); margin:1.75rem auto 0; }
+
+  main.grid{ grid-template-columns:repeat(4, 1fr); }
+  main.grid > aside{ grid-column:1 / -1; font-size:1.25rem; }
+
+  .cards{ grid-template-columns:repeat(3, 1fr); }
+  .map-wrap iframe{ height:420px; }
 }
