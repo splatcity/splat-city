@@ -4,36 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Strike a Chord | Rentals</title>
-  <link rel="stylesheet" href="css/styles_v3.css">
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
+  <link rel="stylesheet" href="css/styles_v3.css" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" sizes="192x192" href="images/android-chrome-192.png" />
 </head>
 <body>
   <header>
-    <h1>🎵 Strike a Chord 🎵</h1>
+    <h1><span class="tab-desk">🎵</span> Strike a Chord <span class="tab-desk">🎵</span></h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="lessons.html">Lessons</a></li>
         <li><a href="instructors.html">Instructors</a></li>
-        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="rentals.html" aria-current="page">Rentals</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="panel">
-      <h2 style="text-align:center">Instrument Rentals</h2>
-      <ul>
-        <li>Student & intermediate instruments</li>
-        <li>Month-to-month agreements</li>
-        <li>Maintenance and setup included</li>
-        <li>Rent-to-own options available</li>
-      </ul>
-      <p>Stop by or <a href="contact.html">contact us</a> to check availability.</p>
+    <section class="panel" id="rental">
+      <h2 id="rental-h2">Rental Rates</h2>
+      <p>We rent many different kinds of musical equipment. See our rental rates below.</p>
+
+      <!-- Table -->
+      <table aria-label="Rental Rates">
+        <caption>Rental Rates</caption>
+        <tr><!-- Row 1 --></tr>
+        <thead>
+          <tr>
+            <th scope="col">Equipment</th>
+            <th scope="col">Daily Rate</th>
+            <th scope="col">Weekend Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><!-- Row 2 -->
+            <td>Guitars</td>
+            <td>$25</td>
+            <td>$40</td>
+          </tr>
+          <tr><!-- Row 3 -->
+            <td>Keyboards</td>
+            <td>$35</td>
+            <td>$60</td>
+          </tr>
+          <tr><!-- Row 4 -->
+            <td>Drum Kits</td>
+            <td>$50</td>
+            <td>$75</td>
+          </tr>
+          <tr><!-- Row 5 -->
+            <td>Microphones</td>
+            <td>$10</td>
+            <td>$15</td>
+          </tr>
+          <tr><!-- Row 6 -->
+            <td>DJ Equipment</td>
+            <td>$22</td>
+            <td>$38</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
