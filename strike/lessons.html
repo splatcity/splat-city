@@ -4,11 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Strike a Chord | Lessons</title>
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles_v3.css" />
-
-  <!-- Favicons -->
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -16,7 +12,7 @@
 </head>
 <body>
   <header>
-    <h1>🎵 Strike a Chord 🎵</h1>
+    <h1><span class="tab-desk">♫</span> Strike a Chord <span class="tab-desk">♫</span></h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -42,29 +38,58 @@
 
     <!-- 3-card gallery -->
     <section class="cards" aria-label="Lesson types">
+
+      <!-- Guitar -->
       <article class="card">
-        <img src="images/guitar.jpg" alt="Guitar lesson">
+        <img src="images/guitar.jpg" alt="Guitar lesson" />
         <div class="pad">
           <h3>Guitar</h3>
           <p>Technique, chords, reading, and songs—acoustic or electric.</p>
+
+          <!-- NEW audio block per lab -->
+          <h4>Guitar Winter Performance</h4>
+          <audio controls>
+            <source src="media/guitar.mp3" type="audio/mpeg" />
+            <source src="media/guitar.ogg" type="audio/ogg" />
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </article>
 
+      <!-- Piano -->
       <article class="card">
-        <img src="images/piano-lesson.jpg" alt="Piano lesson">
+        <img src="images/piano-lesson.jpg" alt="Piano lesson" />
         <div class="pad">
           <h3>Piano</h3>
           <p>Proper posture, note reading, scales, and performance pieces.</p>
+
+          <!-- NEW audio block per lab -->
+          <h4>Piano Spring Performance</h4>
+          <audio controls>
+            <source src="media/piano.mp3" type="audio/mpeg" />
+            <source src="media/piano.ogg" type="audio/ogg" />
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </article>
 
+      <!-- Violin -->
       <article class="card">
-        <img src="images/violin.jpg" alt="Violin lesson">
+        <img src="images/violin.jpg" alt="Violin lesson" />
         <div class="pad">
           <h3>Violin</h3>
           <p>Bow control, intonation, orchestral excerpts, and solo repertoire.</p>
+
+          <!-- NEW audio block per lab -->
+          <h4>Violin Spring Performance</h4>
+          <audio controls>
+            <source src="media/violin.mp3" type="audio/mpeg" />
+            <source src="media/violin.ogg" type="audio/ogg" />
+            Your browser does not support the audio element.
+          </audio>
         </div>
       </article>
+
     </section>
   </main>
 
