@@ -1,52 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Template | Strike a Chord</title>
-
-  <!-- Mobile viewport (Rubric: required) -->
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Google Fonts (Rubric: DM Serif Display + Roboto) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!-- Site CSS -->
-  <link rel="stylesheet" href="css/styles_v3.css" />
+  <title>Template | Strike a Chord</title>
+  <link rel="stylesheet" href="css/styles_v3.css">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
 </head>
 <body>
 
-  <header>
-  <h1><span class="tab-desk">&#9836;</span> Strike a Chord <span class="tab-desk">&#9836;</span></h1>
-</header>
-<div class="nav-divider" aria-hidden="true"></div>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="lessons.html">Lessons</a></li>
-      <li><a href="instructors.html">Instructors</a></li>
-      <li><a href="rentals.html">Rentals</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav">
+    <div id="menu-links">
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Lessons</a>
+      <a href="instructors.html">Instructors</a>
+      <a href="rentals.html">Rentals</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="menu-icon" onclick="hamburger()"><div>&#9776;</div></a>
   </nav>
 
+  <header>
+    <h1>♫ Strike a Chord ♫</h1>
+    <nav class="tab-desk">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <!-- hidden on phones -->
-  <div id="hero" class="tab-desk">
-    <img src="images/music-notes.png" alt="colorful music notes">
+  <div class="hero desktop-only">
+    <img src="images/music-notes.png" alt="colorful music notes" />
   </div>
 
   <main>
     <section class="panel">
-      <!-- Use this template section for new pages -->
-      <p>Content goes here…</p>
+      <h2>Template section for new pages</h2>
+      <p>(Content goes here.)</p>
     </section>
   </main>
 
   <footer>
     <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
-    <p>&copy; 2025 Strike a Chord</p>
+    <p>© 2025 Strike a Chord</p>
   </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
