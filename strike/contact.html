@@ -4,38 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Strike a Chord | Contact</title>
-  <link rel="stylesheet" href="css/styles_v3.css" />
-  <link rel="shortcut icon" href="images/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
-  <link rel="icon" sizes="192x192" href="images/android-chrome-192.png" />
+  <link rel="stylesheet" href="css/styles_v3.css">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
 </head>
 <body>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav">
+    <div id="menu-links">
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Lessons</a>
+      <a href="instructors.html">Instructors</a>
+      <a href="rentals.html">Rentals</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="menu-icon" onclick="hamburger()"><div>&#9776;</div></a>
+  </nav>
+
   <header>
-    <h1><span class="tab-desk">🎵</span> Strike a Chord <span class="tab-desk">🎵</span></h1>
-    <nav>
+    <h1>♫ Strike a Chord ♫</h1>
+    <nav class="tab-desk">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="lessons.html">Lessons</a></li>
         <li><a href="instructors.html">Instructors</a></li>
         <li><a href="rentals.html">Rentals</a></li>
-        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="grid">
-    <aside>
-      <h2>Contact</h2>
-      <p>Call or text: <a href="tel:+15551234567">(555) 123-4567</a></p>
-      <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
-      <div id="map" class="round">
-        <!-- If you already have the embedded map div, keep it. This is just a placeholder box. -->
-        <iframe title="Studio Map"
-          src="https://www.google.com/maps?q=music%20school&output=embed"
-          loading="lazy"></iframe>
-      </div>
-    </aside>
+    <section>
+      <h2>Contact Us</h2>
+      <p>Email us anytime at <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a> or stop by our studio for a free consultation and tour.</p>
+    </section>
 
     <!-- FORM -->
     <section id="form">
@@ -60,28 +66,12 @@
 
         <fieldset>
           <legend>Musical Interest</legend>
-
           <p>I am interested in:</p>
 
-          <label for="guitarles">
-            <input type="checkbox" name="interest" id="guitarles" value="Guitar Lessons" />
-            Guitar Lessons
-          </label>
-
-          <label for="pianoles">
-            <input type="checkbox" name="interest" id="pianoles" value="Piano Lessons" />
-            Piano Lessons
-          </label>
-
-          <label for="violinles">
-            <input type="checkbox" name="interest" id="violinles" value="Violin Lessons" />
-            Violin Lessons
-          </label>
-
-          <label for="rent">
-            <input type="checkbox" name="interest" id="rent" value="Rental Equipment" />
-            Rental Equipment
-          </label>
+          <label for="guitarles"><input type="checkbox" name="interest" id="guitarles" value="Guitar Lessons">Guitar Lessons</label>
+          <label for="pianoles"><input type="checkbox" name="interest" id="pianoles" value="Piano Lessons">Piano Lessons</label>
+          <label for="violinles"><input type="checkbox" name="interest" id="violinles" value="Violin Lessons">Violin Lessons</label>
+          <label for="rent"><input type="checkbox" name="interest" id="rent" value="Rental Equipment">Rental Equipment</label>
         </fieldset>
 
         <input type="submit" id="submit" value="Submit" class="btn" />
@@ -93,5 +83,7 @@
     <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
     <p>© 2025 Strike a Chord</p>
   </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
