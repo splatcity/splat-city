@@ -4,19 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Strike a Chord | Lessons</title>
-  <link rel="stylesheet" href="css/styles_v3.css" />
+  <link rel="stylesheet" href="css/styles_v3.css">
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
 </head>
 <body>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav">
+    <div id="menu-links">
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Lessons</a>
+      <a href="instructors.html">Instructors</a>
+      <a href="rentals.html">Rentals</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="menu-icon" onclick="hamburger()"><div>&#9776;</div></a>
+  </nav>
+
   <header>
-    <h1><span class="tab-desk">♫</span> Strike a Chord <span class="tab-desk">♫</span></h1>
-    <nav>
+    <h1>♫ Strike a Chord ♫</h1>
+    <nav class="tab-desk">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="lessons.html" aria-current="page">Lessons</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
         <li><a href="instructors.html">Instructors</a></li>
         <li><a href="rentals.html">Rentals</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -24,78 +37,73 @@
     </nav>
   </header>
 
-  <main>
-    <!-- Intro panel -->
-    <section class="panel">
-      <h2>Music Lessons</h2>
-      <p>
-        We provide private lessons for <strong>guitar</strong>, <strong>piano</strong>, and
-        <strong>violin</strong>. Sessions are tailored for beginners through advanced
-        students, with flexible scheduling to fit your calendar. Your first lesson is
-        <strong>FREE</strong> so we can meet your instructor and set goals.
-      </p>
-    </section>
+  <!-- Intro panel -->
+  <section class="panel">
+    <h2>Music Lessons</h2>
+    <p>We provide private lessons for <strong>guitar</strong>, <strong>piano</strong>, and
+      <strong>violin</strong>. Sessions are tailored for beginners through advanced students,
+      with flexible scheduling to fit your calendar. Your first lesson is <strong>FREE</strong>
+      so we can meet your instructor and set goals.</p>
+  </section>
 
-    <!-- 3-card gallery -->
-    <section class="cards" aria-label="Lesson types">
+  <!-- 3-card gallery -->
+  <section class="cards" aria-label="Lesson types">
+    <article class="card">
+      <img src="images/guitar.jpg" alt="Guitar lesson">
+      <div class="pad">
+        <h3>Guitar</h3>
+        <p>Technique, chords, reading, and songs—acoustic or electric.</p>
+      </div>
+    </article>
 
-      <!-- Guitar -->
-      <article class="card">
-        <img src="images/guitar.jpg" alt="Guitar lesson" />
-        <div class="pad">
-          <h3>Guitar</h3>
-          <p>Technique, chords, reading, and songs—acoustic or electric.</p>
+    <article class="card">
+      <img src="images/piano-lesson.jpg" alt="Piano lesson">
+      <div class="pad">
+        <h3>Piano</h3>
+        <p>Proper posture, note reading, scales, and performance pieces.</p>
+      </div>
 
-          <!-- NEW audio block per lab -->
-          <h4>Guitar Winter Performance</h4>
-          <audio controls>
-            <source src="media/guitar.mp3" type="audio/mpeg" />
-            <source src="media/guitar.ogg" type="audio/ogg" />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      </article>
+      <!-- Audio demo (from last week’s lab) -->
+      <h4>Piano Spring Performance</h4>
+      <audio controls>
+        <source src="media/piano.mp3" type="audio/mp3">
+        <source src="media/piano.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+    </article>
 
-      <!-- Piano -->
-      <article class="card">
-        <img src="images/piano-lesson.jpg" alt="Piano lesson" />
-        <div class="pad">
-          <h3>Piano</h3>
-          <p>Proper posture, note reading, scales, and performance pieces.</p>
+    <article class="card">
+      <img src="images/violin.jpg" alt="Violin lesson">
+      <div class="pad">
+        <h3>Violin</h3>
+        <p>Bow control, intonation, orchestral excerpts, and solo repertoire.</p>
+      </div>
 
-          <!-- NEW audio block per lab -->
-          <h4>Piano Spring Performance</h4>
-          <audio controls>
-            <source src="media/piano.mp3" type="audio/mpeg" />
-            <source src="media/piano.ogg" type="audio/ogg" />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      </article>
+      <!-- Audio demo -->
+      <h4>Violin Spring Performance</h4>
+      <audio controls>
+        <source src="media/violin.mp3" type="audio/mp3">
+        <source src="media/violin.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+    </article>
+  </section>
 
-      <!-- Violin -->
-      <article class="card">
-        <img src="images/violin.jpg" alt="Violin lesson" />
-        <div class="pad">
-          <h3>Violin</h3>
-          <p>Bow control, intonation, orchestral excerpts, and solo repertoire.</p>
-
-          <!-- NEW audio block per lab -->
-          <h4>Violin Spring Performance</h4>
-          <audio controls>
-            <source src="media/violin.mp3" type="audio/mpeg" />
-            <source src="media/violin.ogg" type="audio/ogg" />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      </article>
-
-    </section>
-  </main>
+  <!-- Guitar audio demo -->
+  <section class="panel">
+    <h4>Guitar Winter Performance</h4>
+    <audio controls>
+      <source src="media/guitar.mp3" type="audio/mp3">
+      <source src="media/guitar.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
 
   <footer>
     <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
     <p>© 2025 Strike a Chord</p>
   </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
