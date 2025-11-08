@@ -11,9 +11,22 @@
   <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
 </head>
 <body>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav">
+    <div id="menu-links">
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Lessons</a>
+      <a href="instructors.html">Instructors</a>
+      <a href="rentals.html">Rentals</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="menu-icon" onclick="hamburger()"><div>&#9776;</div></a>
+  </nav>
+
   <header>
-    <h1>🎵 Strike a Chord 🎵</h1>
-    <nav>
+    <h1>♫ Strike a Chord ♫</h1>
+    <nav class="tab-desk">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="lessons.html">Lessons</a></li>
@@ -32,11 +45,9 @@
   <main>
     <section class="panel">
       <h2 style="text-align:center">Welcome to Strike a Chord!</h2>
-      <p>
-        We make learning music fun. We offer private lessons for piano, guitar, and violin.
-        Contact us today to schedule your first <span class="highlight">FREE</span> lesson—no long-term
-        contracts, flexible schedules, and dedicated instructors.
-      </p>
+      <p>We make learning music fun. We offer private lessons for piano, guitar, and violin.
+      Contact us today to schedule your first <span class="highlight">FREE</span> lesson—no long-term
+      contracts, flexible schedules, and dedicated instructors.</p>
     </section>
   </main>
 
@@ -44,5 +55,7 @@
     <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
     <p>© 2025 Strike a Chord</p>
   </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
