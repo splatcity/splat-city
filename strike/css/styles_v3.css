@@ -83,7 +83,6 @@ nav a[aria-current="page"]{background:#ecebff}
 
 /* ------------------ Hero (desktop-only image) ------------------ */
 .hero.desktop-only{display:none}
-
 /* Responsive Nav Toggle */
 nav.mobile-nav {
   display: block;
