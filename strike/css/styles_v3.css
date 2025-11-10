@@ -84,6 +84,25 @@ nav a[aria-current="page"]{background:#ecebff}
 /* ------------------ Hero (desktop-only image) ------------------ */
 .hero.desktop-only{display:none}
 
+/* Responsive Nav Toggle */
+nav.mobile-nav {
+  display: block;
+}
+
+nav.tab-desk {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  nav.mobile-nav {
+    display: none;
+  }
+
+  nav.tab-desk {
+    display: block;
+  }
+}
+
 /* ------------------ Main grid / aside ------------------ */
 main{padding:1rem}
 .grid{
