@@ -1,64 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Jordan Martinez - November 2025 -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Strike a Chord | Rentals</title>
-  <link rel="stylesheet" href="css/styles_v3.css">
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
-</head>
-<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Need music rental equipment? We rent guitars, keyboards, drum kits, microphones, and DJ equipment." />
+  <title>Music Rental Equipment | Strike a Chord</title>
 
-  <!-- Mobile Nav -->
-  <nav class="mobile-nav">
-    <div id="menu-links">
-      <a href="index.html">Home</a>
-      <a href="lessons.html">Lessons</a>
-      <a href="instructors.html">Instructors</a>
-      <a href="rentals.html">Rentals</a>
-      <a href="contact.html">Contact</a>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles_v3.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark-purple fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-4">🎵</span> <span>Strike a Chord</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="lessons.html">Lessons</a></li>
+          <li class="nav-item"><a class="nav-link" href="instructors.html">Instructors</a></li>
+          <li class="nav-item"><a class="nav-link active" href="rentals.html">Rentals</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <a class="menu-icon" onclick="hamburger()"><div>&#9776;</div></a>
   </nav>
 
-  <header>
-    <h1>♫ Strike a Chord ♫</h1>
-    <nav class="tab-desk">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="lessons.html">Lessons</a></li>
-        <li><a href="instructors.html">Instructors</a></li>
-        <li><a href="rentals.html">Rentals</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="hero text-white text-center bg-dark-purple">
+    <div class="container py-5">
+      <h1 class="display-5 fw-bold">Music Equipment Rentals</h1>
+      <p class="lead">High-quality gear for your performance, studio, or event</p>
+    </div>
   </header>
 
-  <main class="panel">
-    <h2>Rental Rates</h2>
-    <table aria-label="Rental Rates">
-      <caption>Rental Rates</caption>
-      <tr><!-- Row 1 -->
-        <th>Equipment</th>
-        <th>Daily Rate</th>
-        <th>Weekend Rate</th>
-      </tr>
-      <tr><!-- Row 2 --><td>Guitars</td><td>$25</td><td>$40</td></tr>
-      <tr><!-- Row 3 --><td>Keyboards</td><td>$35</td><td>$60</td></tr>
-      <tr><!-- Row 4 --><td>Drum Kits</td><td>$50</td><td>$75</td></tr>
-      <tr><!-- Row 5 --><td>Microphones</td><td>$10</td><td>$15</td></tr>
-      <tr><!-- Row 6 --><td>DJ Equipment</td><td>$22</td><td>$38</td></tr>
-    </table>
+  <!-- Main -->
+  <main class="container my-5">
+    <div class="table-responsive">
+      <table class="table table-bordered text-center align-middle">
+        <caption class="text-center text-dark-purple fw-bold mb-3">
+          Available Rental Equipment
+        </caption>
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Instrument</th>
+            <th scope="col">Description</th>
+            <th scope="col">Rental Rate (per day)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Electric Guitar</td>
+            <td>Fender Stratocaster with amp and cable</td>
+            <td>$20</td>
+          </tr>
+          <tr>
+            <td>Keyboard</td>
+            <td>88-key weighted digital piano with stand</td>
+            <td>$25</td>
+          </tr>
+          <tr>
+            <td>Drum Kit</td>
+            <td>5-piece Yamaha set with cymbals and throne</td>
+            <td>$35</td>
+          </tr>
+          <tr>
+            <td>Microphone</td>
+            <td>Professional dynamic vocal mic with stand</td>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <td>DJ Controller</td>
+            <td>2-channel Pioneer controller with Serato software</td>
+            <td>$40</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </main>
 
-  <footer>
-    <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
-    <p>© 2025 Strike a Chord</p>
+  <!-- Footer -->
+  <footer class="jumbotron-fluid text-center p-5 bg-dark-purple text-white">
+    <div class="container">
+      <div class="copyright mb-3">
+        <p>&copy; 2025 Strike a Chord. All Rights Reserved.</p>
+        <p><a href="mailto:lessons@strikeachord.net" class="text-white">lessons@strikeachord.net</a></p>
+      </div>
+      <div class="social">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="images/facebook-logo.png" alt="Facebook logo" width="48" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="images/twitter-logo.png" alt="Twitter logo" width="48" />
+        </a>
+      </div>
+    </div>
   </footer>
 
-  <script src="scripts/script.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
