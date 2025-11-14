@@ -1,64 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Strike a Chord | Home</title>
-  <link rel="stylesheet" href="css/styles_v3.css">
+  <!-- Jordan Martinez - November 2025 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Strike a Chord specializes in music lessons and music rental equipment.">
+  <title>Music Lessons – Rentals | Strike a Chord</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Favicon -->
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
+
+  <!-- My Style Sheet -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+  <!-- Bootstrap Navigation bar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark-purple fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">🎵 Strike a Chord</a>
 
-<!-- Mobile Nav -->
-<nav class="mobile-nav">
-  <div id="menu-links">
-    <a href="index.html">Home</a>
-    <a href="lessons.html">Lessons</a>
-    <a href="instructors.html">Instructors</a>
-    <a href="rentals.html">Rentals</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div class="menu-icon" onclick="hamburger()">
-    <div>&#9776;</div>
-  </div>
-</nav>
+      <!-- Hamburger Icon -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<!-- Desktop Nav -->
-<header>
-  <h1>Strike a Chord 🎵</h1>
-  <nav class="tab-desk">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="lessons.html">Lessons</a></li>
-      <li><a href="instructors.html">Instructors</a></li>
-      <li><a href="rentals.html">Rentals</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="lessons.html">Lessons</a></li>
+          <li class="nav-item"><a class="nav-link" href="instructors.html">Instructors</a></li>
+          <li class="nav-item"><a class="nav-link" href="rentals.html">Rentals</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-</header>
 
-  <!-- Centered banner image (desktop only) -->
-  <div class="hero desktop-only">
-    <img src="images/music-notes.png" alt="Colorful music notes across the page" class="round" />
-  </div>
+  <!-- Header and Hero Image -->
+  <header class="jumbotron jumbotron-fluid text-center hero bg-dark-purple text-dark-purple">
+    <div class="container welcome">
+      <h1 class="display-3">Welcome to Strike a Chord</h1>
+      <a href="lessons.html" role="button" class="btn btn-outline-secondary btn-lg text-white">Try a Free Lesson</a>
+    </div>
+  </header>
 
-  <main>
-    <section class="panel">
-      <h2 style="text-align:center">Welcome to Strike a Chord!</h2>
-      <p>We make learning music fun. We offer private lessons for piano, guitar, and violin.
-      Contact us today to schedule your first <span class="highlight">FREE</span> lesson—no long-term
-      contracts, flexible schedules, and dedicated instructors.</p>
-    </section>
+  <!-- Main Content Area -->
+  <main class="container-fluid text-center my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="images/guitar.jpg" alt="Child playing guitar" class="img-fluid rounded mb-3">
+        <h3>Lessons</h3>
+        <p class="lead">We offer piano, guitar, and violin lessons.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/piano-lesson.jpg" alt="Piano teacher and student" class="img-fluid rounded mb-3">
+        <h3>Instructors</h3>
+        <p class="lead">Meet our talented and professional instructors.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/violin-lesson.jpg" alt="Violin students practicing" class="img-fluid rounded mb-3">
+        <h3>Rentals</h3>
+        <p class="lead">We rent quality musical equipment.</p>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>Email: <a href="mailto:lessons@strikeachord.net">lessons@strikeachord.net</a></p>
-    <p>© 2025 Strike a Chord</p>
+  <!-- Footer -->
+  <footer class="jumbotron-fluid text-center p-5 bg-dark-purple text-white">
+    <div class="container">
+      <p>&copy; 2025 Strike a Chord. All Rights Reserved.</p>
+      <p>
+        <a href="mailto:lessons@strikeachord.net" class="text-white">lessons@strikeachord.net</a>
+      </p>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="images/facebook-logo.png" alt="Facebook" width="40">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="images/twitter-logo.png" alt="Twitter" width="40">
+      </a>
+    </div>
   </footer>
 
-  <script src="scripts/script.js"></script>
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
