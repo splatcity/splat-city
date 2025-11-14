@@ -1,91 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Jordan Martinez - November 2025 -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Strike a Chord | Lessons</title>
-  <link rel="stylesheet" href="css/styles_v3.css">
-  <link rel="shortcut icon" href="images/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" sizes="192x192" href="images/android-chrome-192.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="We provide music lessons for piano, guitar, electric guitar, bass guitar, ukulele, and the violin. Your first two lessons are free." />
+  <title>Piano, Guitar, Violin Lessons | Strike a Chord</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles_v3.css" />
 </head>
+
 <body>
-
-  <!-- Mobile Nav -->
-  <nav class="mobile-nav">
-    <div id="menu-links">
-      <a href="index.html">Home</a>
-      <a href="lessons.html">Lessons</a>
-      <a href="instructors.html">Instructors</a>
-      <a href="rentals.html">Rentals</a>
-      <a href="contact.html">Contact</a>
-
-<a class="menu-icon" onclick="hamburger()"><div>&#9776;</div></a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark-purple fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-4">🎵</span> <span>Strike a Chord</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="lessons.html">Lessons</a></li>
+          <li class="nav-item"><a class="nav-link" href="instructors.html">Instructors</a></li>
+          <li class="nav-item"><a class="nav-link" href="rentals.html">Rentals</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <header>
-    <h1>♫ Strike a Chord ♫</h1>
-    <nav class="tab-desk">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="lessons.html">Lessons</a></li>
-        <li><a href="instructors.html">Instructors</a></li>
-        <li><a href="rentals.html">Rentals</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="hero text-white text-center bg-dark-purple">
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold">Private Music Lessons</h1>
+      <p class="lead">Piano, Guitar, Violin — Learn at Your Own Pace</p>
+    </div>
   </header>
 
-  <!-- Intro panel -->
-  <section class="panel">
-    <h2>Music Lessons</h2>
-    <p>We provide private lessons for <strong>guitar</strong>, <strong>piano</strong>, and
-      <strong>violin</strong>. Sessions are tailored for beginners through advanced students,
-      with flexible scheduling to fit your calendar. Your first lesson is <strong>FREE</strong>
-      so we can meet your instructor and set goals.</p>
-    
-<section class="cards" aria-label="Lesson types">
-  <article class="card">
-    <img src="images/guitar.jpg" alt="Guitar lesson" />
-    <div class="pad">
-      <h3>Guitar</h3>
-      <p>Technique, chords, reading, and songs—acoustic or electric.</p>
-    </div>
-    <!-- Guitar audio demo -->
-    <h4>Guitar Winter Performance</h4>
-    <audio controls>
-      <source src="media/guitar.mp3" type="audio/mp3" />
-      <source src="media/guitar.ogg" type="audio/ogg" />
-      Your browser does not support the audio element.
-    </audio>
-  </article>
+  <!-- Main -->
+  <main class="container my-5 text-center">
+    <div class="row gy-5 justify-content-center">
+      <!-- Piano -->
+      <div class="col-md-4">
+        <img src="images/piano-instructor.jpg" class="img-fluid rounded mb-3" alt="Piano lessons" />
+        <h3>Piano Lessons</h3>
+        <p>Learn classical or modern piano with expert instructors.</p>
+        <audio controls preload="none" class="mt-2 w-100">
+          <source src="media/piano.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
 
-  <article class="card">
-    <img src="images/piano-lesson.jpg" alt="Piano lesson" />
-    <div class="pad">
-      <h3>Piano</h3>
-      <p>Proper posture, note reading, scales, and performance pieces.</p>
-    </div>
-    <h4>Piano Spring Performance</h4>
-    <audio controls>
-      <source src="media/piano.mp3" type="audio/mp3" />
-      <source src="media/piano.ogg" type="audio/ogg" />
-      Your browser does not support the audio element.
-    </audio>
-  </article>
+      <!-- Guitar -->
+      <div class="col-md-4">
+        <img src="images/guitar-instructor.jpg" class="img-fluid rounded mb-3" alt="Guitar lessons" />
+        <h3>Guitar Lessons</h3>
+        <p>From acoustic to electric, we’ve got every style covered.</p>
+        <audio controls preload="none" class="mt-2 w-100">
+          <source src="media/guitar.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
 
-  <article class="card">
-    <img src="images/violin.jpg" alt="Violin lesson" />
-    <div class="pad">
-      <h3>Violin</h3>
-      <p>Bow control, intonation, orchestral excerpts, and solo repertoire.</p>
+      <!-- Violin -->
+      <div class="col-md-4">
+        <img src="images/violin-instructor.jpg" class="img-fluid rounded mb-3" alt="Violin lessons" />
+        <h3>Violin Lessons</h3>
+        <p>Refine your technique and musical expression.</p>
+        <audio controls preload="none" class="mt-2 w-100">
+          <source src="media/violin.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
     </div>
-    <h4>Violin Spring Performance</h4>
-    <audio controls>
-      <source src="media/violin.mp3" type="audio/mp3" />
-      <source src="media/violin.ogg" type="audio/ogg" />
-      Your browser does not support the audio element.
-    </audio>
-  </article>
-</section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="jumbotron-fluid text-center p-5 bg-dark-purple text-white">
+    <div class="container">
+      <div class="copyright mb-3">
+        <p>&copy; 2025 Strike a Chord. All Rights Reserved.</p>
+        <p>
+          <a href="mailto:lessons@strikeachord.net" class="text-white">
+            lessons@strikeachord.net
+          </a>
+        </p>
+      </div>
+
+      <div class="social">
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="images/facebook-logo.png" alt="Facebook logo" width="48" />
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <img src="images/twitter-logo.png" alt="Twitter logo" width="48" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
